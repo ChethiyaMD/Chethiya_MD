@@ -30,7 +30,7 @@ ALIVE_MS: process.env.ALIVE_MSG || "I'm Alive Now MD back online 😈🚀🖤 ".
 "*┋ 📜 .ALLMENU*",
 "*┋ ⚙️ .ALIVE*",
 "*╰─────────────●●►*",
-"*👨‍💻 ONLYE OWNER COOMNDS*",
+"*👨‍💻 ONLYE OWNERCOOMNDS*",
 💠 [ 94702484047  ] 🤴",
 
 "❯❯ 𝐍𝐔𝐌𝐁𝐄𝐑 𝐁𝐀𝐍𝐃 🔒",
