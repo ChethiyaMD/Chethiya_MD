@@ -19,7 +19,13 @@ ALIVE_MS: process.env.ALIVE_MSG || "I'm Alive now MD bot back ",
 "♎│URL:* *https:// https://chat.whatsapp.com/Ci0kHZsu12mHbCk3jtQela",
 
 "╰┈───────────╴╴╴•⟢*",
-    
+"*❖╭─────────────···▸*
+"> *TAIME🏷* : 10 hours, 53 minutes, 21 seconds",
+"> *RAM USE🧬* : 103.21MB / 63276MB🚀",
+"> NAME BOT©️: *MD Chethiya* ",
+"> *OWNER*🤴🏼 : *wa.me/94702484047*🛡",
+"> *CREATOR👨🏻‍🔧* : * MD ( chethiya wedasinga )* ",
+"> *VERSIONS🗃* :1.200.0v ",
 "•────────────╴╴╴•⟢",
 
 "> *© POWER BY MD CHETHIUA* ",
