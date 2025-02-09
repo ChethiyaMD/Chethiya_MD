@@ -13,7 +13,7 @@ ALIVE_MS: process.env.ALIVE_MSG || "I'm Alive now MD bot back ",
 "╰───────────🔲╶🔳╶╾⦁⦂",
 "•────────────╴╴╴•⟢",
     "👋 HELLOW",
-"╰┈───────────╴╴╴•⟢*"
+"╰┈───────────╴╴╴•⟢"
 ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏"JOINE MY WHATSAPP SONG GRUP🪢",
     
 "♎│URL:* *https:// https://chat.whatsapp.com/Ci0kHZsu12mHbCk3jtQela",
