@@ -14,6 +14,13 @@ if(!Owner) return
 const {exec} = require("child_process")
 reply("LODEIN 🪢...")
 reply("restarting📶©️...")
+reply("*❖╭─────────────···▸*",
+"> *TAIME* : 10 hours, 53 minutes, 21 seconds",
+"> *RAM USE* : 103.21MB / 63276MB",
+"> NAME BOT: *MD Chethiya*",
+"> *OWNER* : *wa.me/94702484047*",
+"> *CREATOR* : *CYBER MD ( chethiya wedasinga )*",
+"> *VERSIONS* :1.200.0v")",
 reply("MD_CHETHIYA_00 restarting Don 🗃🛡...") 
 await sleep(1500)
 exec("pm2 restart all")
