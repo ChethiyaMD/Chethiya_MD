@@ -11,7 +11,7 @@
     "dependencies": {
         "@adiwajshing/keyed-db": "^0.2.4",
         "@whiskeysockets/baileys": "npm:asitha-baliyes-new",
-        "pixaldrain-sinhalasub": "git+https://github.com/mrsupunfernando12/pixaldrain-sinhalasub.git",      
+        "pixaldrain-sinhalasub": "https://i.ibb.co/7JGtzTZR/117.jpg",      
         "@sl-code-lords/esana-news": "latest",                
         "@blackamda/telegram-image-url": "^1.0.0",
         "@bochilteam/scraper": "^4.0.22-alpha.0",
