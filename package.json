@@ -1,10 +1,10 @@
 {
-    "name": "chethiya_MD_CHETIYA_00",
+    "name": "chethiya_MD_CHETIYA_00🚀😈🚫",
     "version": "3.3.4",
     "description": "MD_CHETIYA_00 multi-device WhatsApp bot",
     "main": "index.js",
     "scripts": {
-        "start": "pm2 start index.js --deep-monitoring --attach --name supun-md",
+        "start": "pm2 start index.js --deep-monitoring --attach --chethiya_MD",
         "stop": "pm2 stop chethiy_MD_CHETIYA_00",
         "restart": "pm2 restart chethiya_MD_CHETIYA_00"
     },
