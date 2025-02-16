@@ -23,13 +23,13 @@
   
 <p align="center">
 <a href="https://github.com/mrsupunfernando12/followers"><img title="Followers" src="https://img.shields.io/github/followers/mrsupunfernando12?color=red&style=flat-square"></a>
-<a href="https://github.com/mrsupunfernando12/SUPUN-MD/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/mrsupunfernando12/SUPUN-MD?color=blue&style=flat-square"></a>
+<a href="https://github.com/mrsupunfernando12/ChethiyaMD/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/mrsupunfernando12/ChethiyaMD?color=blue&style=flat-square"></a>
 <a href="https://github.com/mrsupunfernando12/SUPUN-MD/network/members"><img title="Forks" src="https://img.shields.io/github/forks/mrsupunfernando12/SUPUN-MD?color=red&style=flat-square"></a>
-<a href="https://github.com/mrsupunfernando12/SUPUN-MD/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/mrsupunfernando12/SUPUN-MD?label=Watchers&color=blue&style=flat-square"></a>
-<a href="https://github.com/mrsupunfernando12/SUPUN-MD"><img title="Open Source" src="https://img.shields.io/badge/Author-Supun%20Bot%20Inc.-red?v=103"></a>
-<a href="https://github.com/mrsupunfernando12/SUPUN-MD/"><img title="Size" src="https://img.shields.io/github/repo-size/mrsupunfernando12/SUPUN-MD?style=flat-square&color=green"></a>
-<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fmrsupunfernando12%2FSUPUN-MD&count_bg=%2379C83D&title_bg=%23555555&icon=probot.svg&icon_color=%2300FF6D&title=hits&edge_flat=false"/></a>
-<a href="https://github.com/SUPUN-MD/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>&nbsp;&nbsp;
+<a href="https://github.com/mrsupunfernando12/ChethiyaMD/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/mrsupunfernando12/SUPUN-MD?label=Watchers&color=blue&style=flat-square"></a>
+<a href="https://github.com/mrsupunfernando12/ChethiyaMD"><img title="Open Source" src="https://img.shields.io/badge/Author-Supun%20Bot%20Inc.-red?v=103"></a>
+<a href="https://github.com/mrsupunfernando12/ChethiyaMD/"><img title="Size" src="https://img.shields.io/github/repo-size/mrsupunfernando12/ChethiyaMD?style=flat-square&color=green"></a>
+<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fmrsupunfernando12%2Fchethiya-MD&count_bg=%2379C83D&title_bg=%23555555&icon=probot.svg&icon_color=%2300FF6D&title=hits&edge_flat=false"/></a>
+<a href="https://github.com/chethiya-MD/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>&nbsp;&nbsp;
 </p>
 
 <br>
@@ -39,7 +39,7 @@
 </p>
 </p>
 <p align="center">
-<a href="#"><img title="bot-Creator" src="https://img.shields.io/badge/Creator-Mr.Supun Fernando-red.svg?style=for-the-badge&logo=github"></a>
+<a href="#"><img title="bot-Creator" src="https://img.shields.io/badge/Creator-Mr.Chethiya red.svg?style=for-the-badge&logo=github"></a>
 </p>
 <p align="center"> 
 <u>🌺 Chethiya_MD 🌺</u>
