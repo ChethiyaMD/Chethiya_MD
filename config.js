@@ -11,6 +11,6 @@ function convertToBool(text, fault = 'true') {
 module.exports = {
 SESSION_ID: process.env.SESSION_ID || 'session id', //add your session id
 MONGODB: process.env.MONGODB || 'mongodb://mongo:McPSVfNkrNhTqaOOhExpUiRehdgUvYEM@trolley.proxy.rlwy.net:15431', //mongo 
- URL : process.env.BOT_MENU_LINKS || 'https://i.ibb.co/bHXBV08/9242c844b83f7bf9.jpg',
+ URL : process.env.BOT_MENU_LINKS || 'https://files.catbox.moe/b7hkxj.jpg',
 MAX_SIZE: 500
 };
