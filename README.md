@@ -1,4 +1,4 @@
-#_Chethiya_MD_CHETHIYA_00-Device
+# _Chethiya_MD_CHETHIYA_00-Device
 # _Multi device whatsapp bot 
   
  <a><img src='https://files.catbox.moe/b7hkxj.jpg'/></a>
@@ -24,7 +24,7 @@
 <p align="center">
 <a href="https://github.com/mrsupunfernando12/followers"><img title="Followers" src="https://img.shields.io/github/followers/mrsupunfernando12?color=red&style=flat-square"></a>
 <a href="https://github.com/mrsupunfernando12/ChethiyaMD/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/mrsupunfernando12/ChethiyaMD?color=blue&style=flat-square"></a>
-<a href="https://github.com/mrsupunfernando12/SUPUN-MD/network/members"><img title="Forks" src="https://img.shields.io/github/forks/mrsupunfernando12/SUPUN-MD?color=red&style=flat-square"></a>
+<a href="https://github.com/mrsupunfernando12/SUPUN-MD/network/members"><img title="Forks" src="https://files.catbox.moe/b7hkxj.jpg"></a>
 <a href="https://github.com/mrsupunfernando12/ChethiyaMD/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/mrsupunfernando12/SUPUN-MD?label=Watchers&color=blue&style=flat-square"></a>
 <a href="https://github.com/mrsupunfernando12/ChethiyaMD"><img title="Open Source" src="https://img.shields.io/badge/Author-Supun%20Bot%20Inc.-red?v=103"></a>
 <a href="https://github.com/mrsupunfernando12/ChethiyaMD/"><img title="Size" src="https://img.shields.io/github/repo-size/mrsupunfernando12/ChethiyaMD?style=flat-square&color=green"></a>
@@ -70,7 +70,7 @@
  
  <br>
 
-<a><img src='https://https://i.ibb.co/7JGtzTZR/117.jpg'/></a>
+<a><img src='https://files.catbox.moe/b7hkxj.jpg.'/></a>
 
 `Chethiya│MD│𝐕3 - 𝖡𝗒 ©𝖬𝗋.chethiya wedasinga`
 
