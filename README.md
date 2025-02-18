@@ -1,17 +1,17 @@
-# _MD_chethiya-Device_
-## _Multi device whatsapp bot 
+#_Chethiya_MD_CHETHIYA_00-Device
+# _Multi device whatsapp bot 
   
- <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+ <a><img src='https://files.catbox.moe/b7hkxj.jpg'/></a>
  <div align="center">
      
  [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=F01&lines=Chethiya+MD+BOT)](https://git.io/typing-svg) </div>
- <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+ <a><img src='https://files.catbox.moe/b7hkxj.jpg'/></a>
 <p align="center"> 
 <u>⚡ A simple WhatsApp User Bot Coded By Mr.chethiya wedasiga ⚡</u>
 </p>
 <img src="https://i.ibb.co/7JGtzTZR/117.jpg"/>       
 <p align="center">
-  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=EB+Garamond&weight=800&size=28&duration=4000&pause=1000&random=false&width=435&lines= Chethiya+│MD+│3.00.1.0v ; 𝐌𝐔𝐋𝐓𝐈 +𝐃𝐄𝐕𝐈𝐂𝐄 +𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏 +𝐁𝐎𝐓 ;𝐅𝐎𝐑𝐖𝐎𝐀𝐃 +𝐁𝐘 +𝐃𝐒 +𝐌𝐎𝐃𝐙;𝐁𝐘 +𝐌𝐑.+Chethiya +wedasinga" alt="Typing SVG" /></a>
+  <a href="https://files.catbox.moe/b7hkxj.jpg"><img src="https://readme-typing-svg.demolab.com?font=EB+Garamond&weight=800&size=28&duration=4000&pause=1000&random=false&width=435&lines= Chethiya+│MD+│3.00.1.0v ; 𝐌𝐔𝐋𝐓𝐈 +𝐃𝐄𝐕𝐈𝐂𝐄 +𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏 +𝐁𝐎𝐓 ;𝐅𝐎𝐑𝐖𝐎𝐀𝐃 +𝐁𝐘 +𝐃𝐒 +𝐌𝐎𝐃𝐙;𝐁𝐘 +𝐌𝐑.+Chethiya +wedasinga" alt="Typing SVG" /></a>
 </p>   
 
 <br>
