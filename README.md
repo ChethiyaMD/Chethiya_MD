@@ -9,7 +9,7 @@
 <p align="center"> 
 <u>⚡ A simple WhatsApp User Bot Coded By Mr.chethiya wedasiga ⚡</u>
 </p>
-<img src="https://i.ibb.co/7JGtzTZR/117.jpg"/>       
+<img src=" "/>       
 <p align="center">
   <a href="https://files.catbox.moe/b7hkxj.jpg"><img src="https://readme-typing-svg.demolab.com?font=EB+Garamond&weight=800&size=28&duration=4000&pause=1000&random=false&width=435&lines= Chethiya+│MD+│3.00.1.0v ; 𝐌𝐔𝐋𝐓𝐈 +𝐃𝐄𝐕𝐈𝐂𝐄 +𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏 +𝐁𝐎𝐓 ;𝐅𝐎𝐑𝐖𝐎𝐀𝐃 +𝐁𝐘 +𝐃𝐒 +𝐌𝐎𝐃𝐙;𝐁𝐘 +𝐌𝐑.+Chethiya +wedasinga" alt="Typing SVG" /></a>
 </p>   
@@ -22,17 +22,9 @@
   
   
 <p align="center">
-<a href="https://github.com/mrsupunfernando12/followers"><img title="Followers" src="https://img.shields.io/github/followers/mrsupunfernando12?color=red&style=flat-square"></a>
-<a href="https://github.com/mrsupunfernando12/ChethiyaMD/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/mrsupunfernando12/ChethiyaMD?color=blue&style=flat-square"></a>
-<a href="https://github.com/mrsupunfernando12/SUPUN-MD/network/members"><img title="Forks" src="https://files.catbox.moe/b7hkxj.jpg"></a>
-<a href="https://github.com/mrsupunfernando12/ChethiyaMD/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/mrsupunfernando12/SUPUN-MD?label=Watchers&color=blue&style=flat-square"></a>
-<a href="https://github.com/mrsupunfernando12/ChethiyaMD"><img title="Open Source" src="https://img.shields.io/badge/Author-Supun%20Bot%20Inc.-red?v=103"></a>
-<a href="https://github.com/mrsupunfernando12/ChethiyaMD/"><img title="Size" src="https://img.shields.io/github/repo-size/mrsupunfernando12/ChethiyaMD?style=flat-square&color=green"></a>
-<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fmrsupunfernando12%2Fchethiya-MD&count_bg=%2379C83D&title_bg=%23555555&icon=probot.svg&icon_color=%2300FF6D&title=hits&edge_flat=false"/></a>
-<a href="https://github.com/chethiya-MD/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>&nbsp;&nbsp;
-</p>
-
-<br>
+<a href="https://github.com/mrsupunfernando 0😪/followers"><img title="Followers" src="https://img.shields.io/github/followers/mr ChethiyaMD 12?color=red&style=flat-square"></a>
+" src="https://files.catbox.moe/b7hkxj.jpg"></a>
+<a href="https://github.com/mrsupunfernando12/ChethiyaMD/watchers"><img title="Watching" 
  
 <p align="center">
 <a href="#"><img title="sapot" src="https://img.shields.io/badge/Supun-Fernando-red.svg?style=for-the-badge&logo=github"></a>
