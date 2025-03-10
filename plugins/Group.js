@@ -1,272 +1,464 @@
-const {
-  isAdmin,
-  sleep,
-  bot,
-  addSpace,
-  jidToNum,
-  formatTime,
-  parsedJid,
-  getCommon,
-  lang,
-} = require('../lib/')
+const config = require('../config')
+const { cmd, commands } = require('../command')
+const { getBuffer, getGroupAdmins, getRandom, h2k, isUrl, Json, runtime, sleep, fetchJson} = require('../lib/functions')
 
-bot(
-  {
-    pattern: 'kick ?(.*)',
-    desc: lang.plugins.kick.desc,
-    recat:⚠️,
-    type: 'group',
-    onlyGroup: true,
-  },
-  async (message, match) => {
-    const participants = await message.groupMetadata(message.jid)
-    const isImAdmin = await isAdmin(participants, message.client.user.jid)
-    if (!isImAdmin) return await message.send(lang.plugins.kick.not_admin)
-    let user = message.mention[0] || message.reply_message.jid
-    if (!user && match != 'all') return await message.send(lang.plugins.kick.mention_user)
-    const isUserAdmin = match != 'all' && (await isAdmin(participants, user))
-    if (isUserAdmin) return await message.send(lang.plugins.kick.admin)
-    if (match == 'all') {
-      user = participants.filter((member) => !member.admin == true).map(({ id }) => id)
-      await message.send(lang.plugins.kick.kicking_all.format(user.length))
-      await sleep(10 * 1000)
-    }
-    await message.Kick(user)
-    if (message.reply_message) {
-      await sleep(3000)
-      await message.send(message.reply_message.key, {}, 'delete')
-    }
-  }
-)
+cmd({
+    pattern: "mute",
+    react: "🔇",
+    alias: ["close","f_mute"],
+    desc: "Change to group settings to only admins can send messages.",
+    category: "group",
+    use: '.mute',
+    filename: __filename
+},
+async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isCreator ,isDev, isAdmins, reply}) => {
+try{
+const msr = (await fetchJson('https://raw.githubusercontent.com/JawadYTX/KHAN-DATA/refs/heads/main/MSG/mreply.json')).replyMsg
 
-bot(
-  {
-    pattern: 'add ?(.*)',
-    desc: lang.plugins.add.desc,
-    react:🌀,
-    type: 'group',
-    onlyGroup: true,
-  },
-  async (message, match) => {
-    await message.send(lang.plugins.add.warning)
-    const participants = await message.groupMetadata(message.jid)
-    const isImAdmin = await isAdmin(participants, message.client.user.jid)
-    if (!isImAdmin) return await message.send(lang.plugins.add.not_admin)
-    match = match || message.reply_message.jid
-    if (!match) return await message.send(lang.plugins.add.invalid_number)
-    await sleep(3000)
-    match = jidToNum(match)
-    const res = await message.Add(match)
-    if (res == '403') return await message.send(lang.plugins.add.failed)
-    else if (res && res != '200') return await message.send(res, { quoted: message.data })
-  }
-)
+if (!isGroup) return reply(msr.only_gp)
+if (!isAdmins) { if (!isDev) return reply(msr.you_adm),{quoted:mek }} 
+if (!isBotAdmins) return reply(msr.give_adm)
+await conn.groupSettingUpdate(from, 'announcement')
+ await conn.sendMessage(from , { text: `*Group Chat closed by Admin ${pushname}* 🔇` }, { quoted: mek } )
+} catch (e) {
+await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
+console.log(e)
+reply(`❌ *Error Accurated !!*\n\n${e}`)
+}
+})
 
-bot(
-  {
-    pattern: 'promote ?(.*)',
-    desc: lang.plugins.promote.desc,
-    type: 'group',
-    onlyGroup: true,
-  },
-  async (message) => {
-    const participants = await message.groupMetadata(message.jid)
-    const isImAdmin = await isAdmin(participants, message.client.user.jid)
-    if (!isImAdmin) return await message.send(lang.plugins.promote.not_admin)
-    const user = message.mention[0] || message.reply_message.jid
-    if (!user) return await message.send(lang.plugins.promote.mention_user)
-    const isUserAdmin = await isAdmin(participants, user)
-    if (isUserAdmin) return await message.send(lang.plugins.promote.already_admin)
-    return await message.Promote(user)
-  }
-)
 
-bot(
-  {
-    pattern: 'demote ?(.*)',
-    desc: lang.plugins.demote.desc,
-    type: 'group',
-    onlyGroup: true,
-  },
-  async (message) => {
-    const participants = await message.groupMetadata(message.jid)
-    const isImAdmin = await isAdmin(participants, message.client.user.jid)
-    if (!isImAdmin) return await message.send(lang.plugins.demote.not_admin)
-    const user = message.mention[0] || message.reply_message.jid
-    if (!user) return await message.send(lang.plugins.demote.mention_user)
-    const isUserAdmin = await isAdmin(participants, user)
-    if (!isUserAdmin) return await message.send(lang.plugins.demote.not_admin_user)
-    return await message.Demote(user)
-  }
-)
+cmd({
+    pattern: "unmute",
+    react: "🔇",
+    alias: ["open","f_unmute"],
+    desc: "Change to group settings to all members can send messages.",
+    category: "group",
+    use: '.unmute',
+    filename: __filename
+},
+async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isCreator ,isDev, isAdmins, reply}) => {
+try{
+const msr = (await fetchJson('https://raw.githubusercontent.com/JawadYTX/KHAN-DATA/refs/heads/main/MSG/mreply.json')).replyMsg
 
-bot(
-  {
-    pattern: 'invite ?(.*)',
-    desc: lang.plugins.invite.desc,
-    react :💈,
-    type: 'group',
-    onlyGroup: true,
-  },
-  async (message) => {
-    const participants = await message.groupMetadata(message.jid)
-    const isImAdmin = await isAdmin(participants, message.client.user.jid)
-    if (!isImAdmin) return await message.send(lang.plugins.invite.not_admin)
-    return await message.send(
-      lang.plugins.invite.success.format(await message.inviteCode(message.jid))
-    )
-  }
-)
+if (!isGroup) return reply(msr.only_gp)
+if (!isAdmins) { if (!isDev) return reply(msr.you_adm),{quoted:mek }} 
+if (!isBotAdmins) return reply(msr.give_adm)
+await conn.groupSettingUpdate(from, 'not_announcement')
+ await conn.sendMessage(from , { text: `*Group Chat Opened by Admin ${pushname}* 🔇` }, { quoted: mek } )
+} catch (e) {
+await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
+console.log(e)
+reply(`❌ *Error Accurated !!*\n\n${e}`)
+}
+} )
 
-bot(
-  {
-    pattern: 'mute ?(.*)',
-    desc: lang.plugins.mute.desc,
-    type: 'group',
-    onlyGroup: true,
-  },
-  async (message, match) => {
-    const participants = await message.groupMetadata(message.jid)
-    const isImAdmin = await isAdmin(participants, message.client.user.jid)
-    if (!isImAdmin) return await message.send(lang.plugins.mute.not_admin)
-    if (!match || isNaN(match)) return await message.GroupSettingsChange(message.jid, true)
-    await message.GroupSettingsChange(message.jid, true)
-    await message.send(lang.plugins.mute.mute.format(match))
-    await sleep(1000 * 60 * match)
-    return await message.GroupSettingsChange(message.jid, false)
-  }
-)
 
-bot(
-  {
-    pattern: 'unmute ?(.*)',
-    desc: lang.plugins.unmute.desc,
-    type: 'group',
-    onlyGroup: true,
-  },
-  async (message) => {
-    const participants = await message.groupMetadata(message.jid)
-    const isImAdmin = await isAdmin(participants, message.client.user.jid)
-    if (!isImAdmin) return await message.send(lang.plugins.unmute.not_admin)
-    return await message.GroupSettingsChange(message.jid, false)
-  }
-)
+cmd({
+    pattern: "lockgs",
+    react: "🔇",
+    alias: ["lockgsettings"],
+    desc: "Change to group settings to only admins can edit group info",
+    category: "group",
+    use: '.lockgs',
+    filename: __filename
+},
+async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isCreator ,isDev, isAdmins, reply}) => {
+try{
+const msr = (await fetchJson('https://raw.githubusercontent.com/JawadYTX/KHAN-DATA/refs/heads/main/MSG/mreply.json')).replyMsg
 
-bot(
-  {
-    pattern: 'join ?(.*)',
-    type: 'group',
-    desc: lang.plugins.join.desc,
-  },
-  async (message, match) => {
-    match = match || message.reply_message.text
-    if (!match) return await message.send(lang.plugins.join.invalid_link)
-    const wa = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/
-    const [_, code] = match.match(wa) || []
-    if (!code) return await message.send(lang.plugins.join.invalid_link)
-    const res = await message.infoInvite(code)
-    if (res.size > 1024) return await message.send(lang.plugins.join.group_full)
-    const join = await message.acceptInvite(code)
-    if (!join) return await message.send(lang.plugins.join.request_sent)
-    return await message.send(lang.plugins.join.success)
-  }
-)
+if (!isGroup) return reply(msr.only_gp)
+if (!isAdmins) { if (!isDev) return reply(msr.you_adm),{quoted:mek }} 
+if (!isBotAdmins) return reply(msr.give_adm)
+await conn.groupSettingUpdate(from, 'locked')
+ await conn.sendMessage(from , { text: `*Group settings Locked* 🔒` }, { quoted: mek } )
+} catch (e) {
+await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
+console.log(e)
+reply(`❌ *Error Accurated !!*\n\n${e}`)
+}
+} )
 
-bot(
-  {
-    pattern: 'revoke',
-    onlyGroup: true,
-    type: 'group',
-    desc: lang.plugins.revoke.desc,
-  },
-  async (message, match) => {
-    const participants = await message.groupMetadata(message.jid)
-    const im = await isAdmin(participants, message.client.user.jid)
-    if (!im) return await message.send(lang.plugins.revoke.not_admin)
-    await message.revokeInvite(message.jid)
-  }
-)
 
-bot(
-  {
-    pattern: 'ginfo ?(.*)',
-    type: 'group',
-    desc: lang.plugins.group_info.desc,
-  },
-  async (message, match) => {
-    match = match || message.reply_message.text
-    if (!match) return await message.send('*Example : info group_invte_link*')
-    const linkRegex = /chat.whatsapp.com\/([0-9A-Za-z]{20,24})/i
-    const [_, code] = match.match(linkRegex) || []
-    if (!code) return await message.send(lang.plugins.group_info.invalid_link)
-    const res = await message.infoInvite(code)
-    const caption = lang.plugins.group_info.details.format(
-      res.subject,
-      res.id,
-      jidToNum(res.creator),
-      res.size,
-      res.creation,
-      res.desc
-    )
-    if (res.url) return await message.sendFromUrl(res.url, { caption })
-    return await message.send(caption)
-  }
-)
+cmd({
+    pattern: "unlockgs",
+    react: "🔓",
+    alias: ["unlockgsettings"],
+    desc: "Change to group settings to all members can edit group info",
+    category: "group",
+    use: '.unlockgs',
+    filename: __filename
+},
+async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isCreator ,isDev, isAdmins, reply}) => {
+try{
+const msr = (await fetchJson('https://raw.githubusercontent.com/JawadYTX/KHAN-DATA/refs/heads/main/MSG/mreply.json')).replyMsg
 
-bot(
-  {
-    pattern: 'common ?(.*)',
-    onlyGroup: true,
-    type: 'group',
-    desc: lang.plugins.common_members.desc,
-  },
-  async (message, match) => {
-    const example = `*Example*\ncommon jid\ncommon jid kick\ncommon jid1 jid2\ncommon jid1,jid2 kick\ncommon jid1 jid2 jid3...jid999\n\ncommon jid1 jid2 jid3 any\nkick - to remove only group u command\nkickall - to remove from all jids\nany - to include two or more common group members\nskip - to avoid removing from all, example skip to avoid from one group or skip jid1,jid2,jid3 to skip from.`
-    const kick = match.includes('kick')
-    const kickFromAll = match.includes('kickall')
-    const isAny = match.includes('any')
-    const jids = parsedJid(match)
-    const toSkip = parsedJid(match.split('skip')[1] || '')
-    const anySkip = match.includes('skip') && !toSkip.length
-    if (!match || (jids.length == 1 && jids.includes(message.jid)))
-      return await message.send(example)
-    if (!jids.includes(message.jid) && jids.length < 2) jids.push(message.jid)
-    const metadata = {}
-    for (const jid of jids) {
-      metadata[jid] = (await message.groupMetadata(jid))
-        .filter((user) => !user.admin)
-        .map(({ id }) => id)
-    }
-    if (Object.keys(metadata).length < 2) return await message.send(example)
-    const common = getCommon(Object.values(metadata), isAny)
-    if (!common.length) return await message.send(lang.plugins.common_members.found)
-    if (kickFromAll) {
-      let gids = jids
-      if (!anySkip) gids = jids.filter((id) => !toSkip.includes(id))
-      const skip = {}
-      for (const jid of gids) {
-        const participants = await message.groupMetadata(jid)
-        const kick = participants.map(({ id }) => id).filter((id) => common.includes(id))
-        const im = await isAdmin(participants, message.client.user.jid)
-        if (im) {
-          if (anySkip) {
-            for (const id of kick) {
-              if (skip[id]) await message.Kick(id, jid)
-              skip[id] = id
-            }
-          } else await message.Kick(kick, jid)
-        }
-      }
-      return
-    }
-    if (kick) {
-      const participants = await message.groupMetadata(message.jid)
-      const im = await isAdmin(participants, message.client.user.jid)
-      if (!im) return await message.send(lang.plugins.kick.not_admin)
-      return await message.Kick(common)
-    }
-    let msg = ''
-    common.forEach((e, i) => (msg += `${i + 1}${addSpace(i + 1, common.length)} @${jidToNum(e)}\n`))
-    await message.send(msg.trim(), { contextInfo: { mentionedJid: common } })
-  }
-)
+if (!isGroup) return reply(msr.only_gp)
+if (!isAdmins) { if (!isDev) return reply(msr.you_adm),{quoted:mek }} 
+if (!isBotAdmins) return reply(msr.give_adm)
+await conn.groupSettingUpdate(from, 'unlocked')
+ await conn.sendMessage(from , { text: `*Group settings Unlocked* 🔓` }, { quoted: mek } )
+} catch (e) {
+await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
+console.log(e)
+reply(`❌ *Error Accurated !!*\n\n${e}`)
+}
+} )
+
+cmd({
+    pattern: "updategname",
+    react: "🔓",
+    alias: ["upgname","gname"],
+    desc: "To Change the group name",
+    category: "group",
+    use: '.updategname',
+    filename: __filename
+},
+async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isCreator ,isDev, isAdmins, reply}) => {
+try{
+const msr = (await fetchJson('https://raw.githubusercontent.com/JawadYTX/KHAN-DATA/refs/heads/main/MSG/mreply.json')).replyMsg
+
+if (!isGroup) return reply(msr.only_gp)
+if (!isAdmins) { if (!isDev) return reply(msr.you_adm),{quoted:mek }} 
+if (!isBotAdmins) return reply(msr.give_adm)
+if (!q) return reply("*Please write the new Group Subject* 🖊️")
+await conn.groupUpdateSubject(from, q )
+ await conn.sendMessage(from , { text: `✔️ *Group name Updated*` }, { quoted: mek } )
+} catch (e) {
+await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
+console.log(e)
+reply(`❌ *Error Accurated !!*\n\n${e}`)
+}
+} )
+
+
+cmd({
+    pattern: "updategdesc",
+    react: "🔓",
+    alias: ["upgdesc","gdesc"],
+    desc: "To Change the group description",
+    category: "group",
+    use: '.updategdesc',
+    filename: __filename
+},
+async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isCreator ,isDev, isAdmins, reply}) => {
+try{
+const msr = (await fetchJson('https://raw.githubusercontent.com/JawadYTX/KHAN-DATA/refs/heads/main/MSG/mreply.json')).replyMsg
+
+if (!isGroup) return reply(msr.only_gp)
+if (!isAdmins) { if (!isDev) return reply(msr.you_adm),{quoted:mek }} 
+if (!isBotAdmins) return reply(msr.give_adm)
+if (!q) return reply("*Please write the new Group Description* 🖊️")
+await conn.groupUpdateDescription(from, q )
+ await conn.sendMessage(from , { text: `✔️ *Group Description Updated*` }, { quoted: mek } )
+} catch (e) {
+await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
+console.log(e)
+reply(`❌ *Error Accurated !!*\n\n${e}`)
+}
+} )
+
+
+cmd({
+    pattern: "join",
+    react: "📬",
+    alias: ["joinme","f_join"],
+    desc: "To Join a Group from Invite link",
+    category: "group",
+    use: '.join < Group Link >',
+    filename: __filename
+},
+async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isCreator ,isDev, isAdmins, reply}) => {
+try{
+const msr = (await fetchJson('https://raw.githubusercontent.com/JawadYTX/KHAN-DATA/refs/heads/main/MSG/mreply.json')).replyMsg
+
+if (!isCreator && !isDev && !isOwner && !isMe) return reply(msr.own_cmd)
+if (!q) return reply("*Please write the Group Link*️ 🖇️")
+ let result = args[0].split('https://chat.whatsapp.com/')[1]
+ await conn.groupAcceptInvite(result)
+     await conn.sendMessage(from , { text: `✔️ *Successfully Joined*`}, { quoted: mek } )
+} catch (e) {
+await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
+console.log(e)
+reply(`❌ *Error Accurated !!*\n\n${e}`)
+}
+} )
+
+
+
+cmd({
+    pattern: "invite",
+    react: "🖇️",
+    alias: ["grouplink","glink"],
+    desc: "To Get the Group Invite link",
+    category: "group",
+    use: '.invite',
+    filename: __filename
+},
+async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isCreator ,isDev, isAdmins, reply}) => {
+try{
+const msr = (await fetchJson('https://raw.githubusercontent.com/JawadYTX/KHAN-DATA/refs/heads/main/MSG/mreply.json')).replyMsg
+
+if (!isGroup) return reply(msr.only_gp)
+if (!isAdmins) { if (!isDev) return reply(msr.you_adm),{quoted:mek }} 
+if (!isBotAdmins) return reply(msr.give_adm)
+const code = await conn.groupInviteCode(from)
+
+ await conn.sendMessage(from , { text: `🖇️ *Group Link*\n\nhttps://chat.whatsapp.com/${code}`}, { quoted: mek } )
+} catch (e) {
+await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
+console.log(e)
+reply(`❌ *Error Accurated !!*\n\n${e}`)
+}
+} )
+
+
+
+cmd({
+    pattern: "revoke",
+    react: "🖇️",
+    alias: ["revokegrouplink","resetglink","revokelink","f_revoke"],
+    desc: "To Reset the group link",
+    category: "group",
+    use: '.revoke',
+    filename: __filename
+},
+async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isCreator ,isDev, isAdmins, reply}) => {
+try{
+const msr = (await fetchJson('https://raw.githubusercontent.com/JawadYTX/KHAN-DATA/refs/heads/main/MSG/mreply.json')).replyMsg
+
+if (!isGroup) return reply(msr.only_gp)
+if (!isAdmins) { if (!isDev) return reply(msr.you_adm),{quoted:mek }} 
+if (!isBotAdmins) return reply(msr.give_adm)
+await conn.groupRevokeInvite(from)
+ await conn.sendMessage(from , { text: `*Group link Reseted* ⛔`}, { quoted: mek } )
+} catch (e) {
+await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
+console.log(e)
+reply(`❌ *Error Accurated !!*\n\n${e}`)
+}
+} )
+
+
+cmd({
+    pattern: "kick",
+    react: "🥏",
+    alias: ["remove"],
+    desc: "To Remove a participant from Group",
+    category: "group",
+    use: '.kick',
+    filename: __filename
+},
+async(conn, mek, m,{from, l, quoted, body, isCmd, command, mentionByTag , args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isCreator ,isDev, isAdmins, reply}) => {
+try{
+const msr = (await fetchJson('https://raw.githubusercontent.com/JawadYTX/KHAN-DATA/refs/heads/main/MSG/mreply.json')).replyMsg
+
+if (!isGroup) return reply(msr.only_gp)
+if (!isAdmins) { if (!isDev) return reply(msr.you_adm),{quoted:mek }} 
+if (!isBotAdmins) return reply(msr.give_adm)
+  
+		let users = mek.mentionedJid ? mek.mentionedJid[0] : mek.msg.contextInfo.participant || false;
+			if (!users) return reply("*Couldn't find any user in context* ❌")
+
+			await conn.groupParticipantsUpdate(from, [users], "remove")
+			await conn.sendMessage(from,{text:`*Successfully removed*  ✔️`},{quoted:mek })
+	
+} catch (e) {
+await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
+console.log(e)
+reply(`❌ *Error Accurated !!*\n\n${e}`)
+}
+} )
+
+
+cmd({
+    pattern: "promote",
+    react: "🥏",
+    alias: ["addadmin"],
+    desc: "To Add a participatant as a Admin",
+    category: "group",
+    use: '.promote',
+    filename: __filename
+},
+async(conn, mek, m,{from, l, quoted, body, isCmd, command, mentionByTag , args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isCreator ,isDev, isAdmins, reply}) => {
+try{
+const msr = (await fetchJson('https://raw.githubusercontent.com/JawadYTX/KHAN-DATA/refs/heads/main/MSG/mreply.json')).replyMsg
+
+if (!isGroup) return reply(msr.only_gp)
+if (!isAdmins) { if (!isDev) return reply(msr.you_adm),{quoted:mek }} 
+if (!isBotAdmins) return reply(msr.give_adm)   
+	
+		let users = mek.mentionedJid ? mek.mentionedJid[0] : mek.msg.contextInfo.participant || false;
+	
+	if (!users) return reply("*Couldn't find any user in context* ❌")
+	
+		const groupAdmins = await getGroupAdmins(participants) 
+		if  ( groupAdmins.includes(users)) return reply('❗ *User Already an Admin*  ✔️')
+		    await conn.groupParticipantsUpdate(from, [users], "promote")
+			await conn.sendMessage(from,{text:`*User promoted as an Admin*  ✔️`},{quoted:mek })
+	
+} catch (e) {
+await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
+console.log(e)
+reply(`❌ *Error Accurated !!*\n\n${e}`)
+}
+} )
+
+cmd({
+    pattern: "demote",
+    react: "🥏",
+    alias: ["removeadmin"],
+    desc: "To Demote Admin to Member",
+    category: "group",
+    use: '.demote',
+    filename: __filename
+},
+async(conn, mek, m,{from, l, quoted, body, isCmd, command, mentionByTag , args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isCreator ,isDev, isAdmins, reply}) => {
+try{
+const msr = (await fetchJson('https://raw.githubusercontent.com/JawadYTX/KHAN-DATA/refs/heads/main/MSG/mreply.json')).replyMsg
+
+if (!isGroup) return reply(msr.only_gp)
+if (!isAdmins) { if (!isDev) return reply(msr.you_adm),{quoted:mek }} 
+if (!isBotAdmins) return reply(msr.give_adm)
+		let users = mek.mentionedJid ? mek.mentionedJid[0] : mek.msg.contextInfo.participant || false;
+			if (!users) return reply("*Couldn't find any user in context* ❌")
+		const groupAdmins = await getGroupAdmins(participants) 
+		if  ( !groupAdmins.includes(users)) return reply('❗ *User Already not an Admin*')
+		    await conn.groupParticipantsUpdate(from, [users], "demote")
+			await conn.sendMessage(from,{text:`*User No longer an Admin*  ✔️`},{quoted:mek })
+	
+} catch (e) {
+await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
+console.log(e)
+reply(`❌ *Error Accurated !!*\n\n${e}`)
+}
+} )
+
+cmd({
+    pattern: "tagall",
+    react: "🔊",
+    alias: ["f_tagall"],
+    desc: "To Tag all Members",
+    category: "group",
+    use: '.tagall',
+    filename: __filename
+},
+async(conn, mek, m,{from, l, quoted, body, isCmd, command, mentionByTag , args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isCreator ,isDev, isAdmins, reply}) => {
+try{
+const msr = (await fetchJson('https://raw.githubusercontent.com/JawadYTX/KHAN-DATA/refs/heads/main/MSG/mreply.json')).replyMsg
+
+if (!isGroup) return reply(msr.only_gp)
+if (!isAdmins) { if (!isDev) return reply(msr.you_adm),{quoted:mek }} 
+if (!isBotAdmins) return reply(msr.give_adm)
+
+		let teks = `💱 *HI ALL ! GIVE YOUR ATTENTION PLEASE* 
+ 
+`
+                for (let mem of participants) {
+                teks += `🥎 @${mem.id.split('@')[0]}\n`
+                }
+                conn.sendMessage(from, { text: teks, mentions: participants.map(a => a.id) }, { quoted: mek })
+                
+} catch (e) {
+await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
+console.log(e)
+reply(`❌ *Error Accurated !!*\n\n${e}`)
+}
+} )
+
+cmd({
+    pattern: "hidetag",
+    react: "🔊",
+    alias: ["tag","f_tag"],
+    desc: "To Tag all Members for Message",
+    category: "group",
+    use: '.tag Hi',
+    filename: __filename
+},
+async(conn, mek, m,{from, l, quoted, body, isCmd, command, mentionByTag , args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isCreator ,isDev, isAdmins, reply}) => {
+try{
+const msr = (await fetchJson('https://raw.githubusercontent.com/JawadYTX/KHAN-DATA/refs/heads/main/MSG/mreply.json')).replyMsg
+
+if (!isGroup) return reply(msr.only_gp)
+if (!isAdmins) { if (!isDev) return reply(msr.you_adm),{quoted:mek }} 
+if (!isBotAdmins) return reply(msr.give_adm)
+	
+		if(!q) return reply('*Please add a Message* ℹ️')
+		let teks = `${q}`
+                conn.sendMessage(from, { text: teks, mentions: participants.map(a => a.id) }, { quoted: mek })
+                
+} catch (e) {
+await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
+console.log(e)
+reply(`❌ *Error Accurated !!*\n\n${e}`)
+}
+} )
+
+cmd({
+    pattern: "taggp",
+    react: "🔊",
+    alias: ["tggp","f_taggp"],
+    desc: "To Tag all Members for Message",
+    category: "group",
+    use: '.tag Hi',
+    filename: __filename
+},
+async(conn, mek, m,{from, l, quoted, body, isCmd, command, mentionByTag , args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isCreator ,isDev, isAdmins, reply}) => {
+try{
+		if ( !m.quoted ) return reply('*Please mention a message* ℹ️')
+		if(!q) return reply('*Please add a Group Jid* ℹ️')
+		//if ( q == "120363174739054837@g.us" ) { if ( !isDev ) return reply("❌ *Acai wage ! You can send Tag messages to Official Support Group*") }
+		let teks = `${m.quoted.msg}`
+        conn.sendMessage(q, { text: teks, mentions: participants.map(a => a.id) }, { quoted: mek })
+                
+} catch (e) {
+await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
+console.log(e)
+reply(`❌ *Error Accurated !!*\n\n${e}`)
+}
+} )
+
+cmd({
+    pattern: "ginfo",
+    react: "🥏",
+    alias: ["groupinfo"],
+    desc: "Get group informations.",
+    category: "group",
+    use: '.ginfo',
+    filename: __filename
+},
+async(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isCreator ,isDev, isAdmins, reply}) => {
+try{
+const msr = (await fetchJson('https://raw.githubusercontent.com/JawadYTX/KHAN-DATA/refs/heads/main/MSG/mreply.json')).replyMsg
+
+if (!isGroup) return reply(msr.only_gp)
+if (!isAdmins) { if (!isDev) return reply(msr.you_adm),{quoted:mek }} 
+if (!isBotAdmins) return reply(msr.give_adm)
+const ppUrls = [
+        'https://files.catbox.moe/b7hkxj.jpg',
+        'https://files.catbox.moe/b7hkxj.jpg',
+        'https://files.catbox.moe/b7hkxj.jpg',
+      ];
+let ppUrl = await conn.profilePictureUrl( from , 'image')
+if (!ppUrl) { ppUrl = ppUrls[Math.floor(Math.random() * ppUrls.length)];}
+const metadata = await conn.groupMetadata(from)
+const groupAdmins = participants.filter(p => p.admin);
+const listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).join('\n');
+const owner = metadata.owner
+
+const gdata = `*「 Group Information 」*\n
+\t*${metadata.subject}*
+
+*Group Jid* - ${metadata.id}
+*Participant Count* - ${metadata.size}
+*Group Creator* - ${owner.split('@')[0]}
+*Group Description* - ${metadata.desc?.toString() || 'undefined'}\n
+*Group Admins* - \n${listAdmin}\n`
+
+await conn.sendMessage(from,{image:{url: ppUrl },caption: gdata + config.FOOTER },{quoted:mek })
+} catch (e) {
+await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
+console.log(e)
+reply(`❌ *Error Accurated !!*\n\n${e}`)
+}
+} )
