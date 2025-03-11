@@ -38,15 +38,8 @@
 
   </a>
   </p>
-  
-<p align="center">
-<a href="#"><img title="sapot" src="https://img.shields.io/badge/Supun-Fernando-red.svg?style=for-the-badge&logo=github"></a>
-</p>
-</p>
-<p align="center">
-<a href="#"><img title="bot-Creator" src="https://img.shields.io/badge/Creator-Mr.Chethiya red.svg?style=for-the-badge&logo=github"></a>
-</p>
-<p align="center"> 
+
+
 <u>🌺 Chethiya_MD 🌺</u>
 </p>
 
