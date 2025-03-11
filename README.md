@@ -10,7 +10,7 @@
 </p>
 <img src=" "/>       
 <p align="center">
-  <a href="https://files.catbox.moe/b7hkxj.jpg"><img src="https://readme-typing-svg.demolab.com?font=EB+Garamond&weight=800&size=28&duration=4000&pause=1000&random=false&width=435&lines= Chethiya+│MD+│3.00.1.0v ; 𝐌𝐔𝐋𝐓𝐈 +𝐃𝐄𝐕𝐈𝐂𝐄 +𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏 +𝐁𝐎𝐓 ;𝐅𝐎𝐑𝐖𝐎𝐀𝐃 +𝐁𝐘 +𝐃𝐒 +𝐌𝐎𝐃𝐙;𝐁𝐘 +𝐌𝐑.+Chethiya +wedasinga" alt="Typing SVG" /></a>
+  <img src="https://readme-typing-svg.demolab.com?font=EB+Garamond&weight=800&size=28&duration=4000&pause=1000&random=false&width=435&lines= Chethiya+│MD+│3.00.1.0v ; 𝐌𝐔𝐋𝐓𝐈 +𝐃𝐄𝐕𝐈𝐂𝐄 +𝐖𝐇𝐀𝐓𝐒𝐀𝐏𝐏 +𝐁𝐎𝐓 ;𝐅𝐎𝐑𝐖𝐎𝐀𝐃 +𝐁𝐘 +𝐃𝐒 +𝐌𝐎𝐃𝐙;𝐁𝐘 +𝐌𝐑.+Chethiya +wedasinga" alt="Typing SVG" /></a>
 </p>   
 
 <br>
