@@ -1,57 +1,44 @@
 const axios = require('axios');
 const { cmd } = require('../command');
-const { fetchJson } = require('../lib/functions');
-//This Plugin Created By Suhas Bro ➠ Chethiya_MD_00
-//Don't Sell This Plugin in Enyone.This Plugin is Give Free.
-//Subscribe me on YouTube ➠ @suhasbro
-//https://www.youtube.com/@suhasbro
-
-
 
 cmd({
-    pattern: "hirucheck",
-    alias: ["hirunews","newshiru","hirulk"],
-    react: "⭐",
-    category: "search hiru news",
-    desc: "Fetch the latest news from the SUHAS API in Hiru API.",
-    use: "",
-    filename: __filename,
+    pattern: "news",
+    desc: "Get the latest news headlines.",
+    category: "news",
+    react: "📰",
+    filename: __filename
 },
-    async (conn, mek, m, {
-        from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber,
-        botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName,
-        participants, groupAdmins, isBotAdmins, isAdmins, reply
-    }) => {
-        try {
-            const apiUrl = `https://suhas-bro-apii.vercel.app/hiru`;
-//Dont Change This API Key
-            const response = await axios.get(apiUrl);
-            const data = response.data;
+async (conn, mek, m, { from, reply }) => {
+    try {
+        const apiKey="0f2c43ab11324578a7b1709651736382";
+        const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`);
+        const articles = response.data.articles;
 
-            if (!data || !data.newsURL || !data.title || !data.image || !data.text) {
-                return reply(`*No News Available At This Moment* ❗`);
-            }
+        if (!articles.length) return reply("No news articles found.");
 
-            const { newsURL, title, image, text, Power } = data;
+        // Send each article as a separate message with image and title
+        for (let i = 0; i < Math.min(articles.length, 5); i++) {
+            const article = articles[i];
+            let message = `
+📰 *${article.title}*
+⚠️ _${article.description}_
+🔗 _${article.url}_
 
-            let newsInfo = "chethiya_MD_00 𝐍𝐞𝐰𝐬 𝐔𝐩𝐝𝐚𝐭𝐞 📰\n\n";
-            newsInfo += `✨ *Title*: ${title}\n\n`;
-            newsInfo += `📑 *Description*:\n${text}\n\n`;
-            newsInfo += `⛓️‍💥 *Url*: www.hirunews.lk\n\n`;
-            newsInfo += `> *© 𝙿𝚘𝚠𝚎𝚛𝚎𝚍 𝙱𝚢 chethiya_MD_00  〽️𝙳*\n\n*${Power}*`;
+  ©ᴘᴏᴡᴇʀᴇᴅ ʙʏ chethiya_MD 
+            `;
 
-            if (image) {
-                await conn.sendMessage(m.chat, {
-                    image: { url: image },
-                    caption: newsInfo,
-                }, { quoted: m });
+            console.log('Article URL:', article.urlToImage); // Log image URL for debugging
+
+            if (article.urlToImage) {
+                // Send image with caption
+                await conn.sendMessage(from, { image: { url: article.urlToImage }, caption: message });
             } else {
-                await conn.sendMessage(m.chat, { text: newsInfo }, { quoted: m });
+                // Send text message if no image is available
+                await conn.sendMessage(from, { text: message });
             }
-
-        } catch (error) {
-            console.error(error);
-            reply(`*An Error Occurred While Fetching News At This Moment* ❗`);
-        }
+        };
+    } catch (e) {
+        console.error("Error fetching news:", e);
+        reply("Could not fetch news. Please try again later.");
     }
-);
+});
