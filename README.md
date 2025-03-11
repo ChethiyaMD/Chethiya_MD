@@ -34,15 +34,10 @@
 
   </a>
   <a href="https://github.com/ChethiyaMD/Chethiya_MD">
-    <img src="https://img.shields.io/static/v1?label=Author&message=Sulaksha%20Madara&color=purple&style=plastic">
+    <img src="https://img.shields.io/static/v1?label=Author&message=Chethiya&color=purple&style=plastic">
 
   </a>
   </p>
-
-
-<u>🌺 Chethiya_MD 🌺</u>
-</p>
-
 
 <br>
 
