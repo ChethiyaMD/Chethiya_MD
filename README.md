@@ -21,10 +21,24 @@
   
   
 <p align="center">
-<a href="https://github.com/mrsupunfernando 0😪/followers"><img title="Followers" src="https://img.shields.io/github/followers/mr ChethiyaMD 12?color=red&style=flat-square"></a>
-" src="https://files.catbox.moe/b7hkxj.jpg"></a>
-<a href="https://github.com/mrsupunfernando12/ChethiyaMD/watchers"><img title="Watching" 
- 
+  <a href="https://github.com/ChethiyaMD/Chethiya_MD">
+    <img src="https://img.shields.io/github/repo-size/ChethiyaMD/Chethiya_MD?color=purple&label=Repo%20Size&style=plastic">
+
+  </a>
+  <a href="https://github.com/ChethiyaMD/Chethiya_MD">
+    <img src="https://img.shields.io/github/license/ChethiyaMD/Chethiya_MD?color=purple&label=License&style=plastic">
+
+  </a>
+  <a href="https://github.com/ChethiyaMD/Chethiya_MD">
+    <img src="https://img.shields.io/github/languages/top/ChethiyaMD/Chethiya_MD?color=purple&label=Javascript&style=plastic">
+
+  </a>
+  <a href="https://github.com/ChethiyaMD/Chethiya_MD">
+    <img src="https://img.shields.io/static/v1?label=Author&message=Sulaksha%20Madara&color=purple&style=plastic">
+
+  </a>
+  </p>
+  
 <p align="center">
 <a href="#"><img title="sapot" src="https://img.shields.io/badge/Supun-Fernando-red.svg?style=for-the-badge&logo=github"></a>
 </p>
