@@ -49,7 +49,7 @@
  [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=F01&lines=𝖥𝖮𝖱𝖪+Chethiya+𝖬𝖣)](https://git.io/typing-svg) </div>
   
 <div align="left">
-  <a href="https://github.com/mrsupunfernando12/ChethiyaMD/fork"><img src="https://img.shields.io/badge/Fork%20Create-black?style=for-the-badge&logo=github" alt="FORK Chethiya MD_CHETIYA_00" width="150"></a>
+  <a href="https://github.com/ChethiyaMD/Chethiya_MD/fork"><img src="https://img.shields.io/badge/Fork%20Create-black?style=for-the-badge&logo=github" alt="FORK Chethiya MD_CHETIYA_00" width="150"></a>
    <br>
 
 </div>
