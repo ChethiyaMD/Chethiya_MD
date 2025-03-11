@@ -1,5 +1,4 @@
 # _Chethiya_MD_CHETHIYA_00-Device
-# _Multi device whatsapp bot 
   
  <a><img src='https://files.catbox.moe/b7hkxj.jpg'/></a>
  <div align="center">
