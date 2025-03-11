@@ -1,31 +1,29 @@
-const config = require('../config')
-const {cmd , commands} = require('../command')
-const {sleep} = require('../lib/functions')
+const { cmd, commands } = require("../command");
+const { sleep } = require("../lib/functions");
 
 cmd({
     pattern: "restart",
-    desc: "restart the bot",
+    desc: "Restart the bot JawadYTX",
+    react: "🔄"   
     category: "owner",
     filename: __filename
 },
-async(conn, mek, m,{from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply}) => {
-try{
-if(!Owner) return 
-const {exec} = require("child_process")
-reply("LODEING 🪢...")
-reply("restarting📶©️...")
-reply("*❖╭─────────────···▸*",
-"> *TIME🏷* : 10 hours, 53 minutes, 21 seconds",
-"> *RAM USE🧬🪢* : 103.21MB / 63276MB🚀",
-"> NAME BOT©️: *🤴MD Chethiya*",
-"> *OWNER*🤴: *wa.me/94702484047*",
-"> *CREATOR👨🏻‍🔧* : *🏷 MD ( chethiya wedasinga )*",
-"> *VERSIONS🛡* :1.200.0v")",
-reply("MD_CHETHIYA_00 restarting Don 🗃🛡...") 
-await sleep(1500)
-exec("pm2 restart all")
-}catch(e){
-console.log(e)
-reply(`${e}`)
-}
-})
+async (conn, mek, m, {
+    from, quoted, body, isCmd, command, args, q, isGroup, senderNumber, reply
+}) => {
+    try {
+        // Get the bot owner's number dynamically from conn.user.id
+        const botOwner = conn.user.id.split(":")[0]; // Extract the bot owner's number
+        if (senderNumber !== botOwner) {
+            return reply("Only the bot owner can use this command.");
+        }
+
+        const { exec } = require("child_process");
+        reply("Restarting...");
+        await sleep(1500);
+        exec("pm2 restart all");
+    } catch (e) {
+        console.error(e);
+        reply(`${e}`);
+    }
+});
