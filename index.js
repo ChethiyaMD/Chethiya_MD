@@ -267,7 +267,7 @@ const port = process.env.PORT || 9090;
   // Owner React
   if (!isReact && senderNumber === botNumber) {
       if (config.AUTO_REACT === 'true') {
-          const reactions = ['👾','🤴','😎'];
+          const reactions = ['👾','🤴','😎','🕵‍♂️','🥷','🧑‍💻','👨‍💻','👨🏻‍🔧','🖤','☠','🤖','👿','☢','☣','🛃','⚠️'];
         
                             
         const randomOwnerReaction = reactions[Math.floor(Math.random() * reactions.length)]; // 
@@ -297,9 +297,11 @@ if (!isReact && senderNumber === botNumber) {
         
   //==========WORKTYPE============ 
   if(!isOwner && config.MODE === "private") return
-  if(!isOwner && isGroup && config.MODE === "inbox") return
+  if(!isOwner && isGroup && config.MODE === "publi") return
   if(!isOwner && !isGroup && config.MODE === "groups") return
-   
+  if(!isOwner && !isGroup && config.MODE ===  "inbox") return
+   if(!isOwner && !isGroup && config.MODE ===  "mode menu") return
+	 
   // take commands 
                  
   const events = require('./command')
