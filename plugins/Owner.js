@@ -3,7 +3,7 @@ const config = require('../config');
 
 cmd({
     pattern: "owner",
-    react: "✅", 
+    react: "🧑‍💻", 
     desc: "Get owner number",
     category: "main",
     filename: __filename
