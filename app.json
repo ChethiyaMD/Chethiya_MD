@@ -1,55 +1,183 @@
 {
-  "name": "MD chethiya (¤_¤) ",
-  "description": "Javascript WhatsApp bot made by chethiya wedasiga 😈🚀 ",
-  "logo": "https://telegra.ph/file/ad25b2227fa2a1a01b707.jpg",
-  "keywords": ["bot"],
+  "name": "chethiya_MD_CHETIYA_00",
+  "description": "Javascript WhatsApp bot made by  chethiya wedasiga",
+  "logo": "https://raw.githubusercontent.com/JawadYTX/KHAN-DATA/refs/heads/main/logo/KHAN.png",
+  "keywords": ["chethiya_MD"],
   "success_url": "/",
 
+    "stack": "container",
   "env": {
     "SESSION_ID": {
       "description": "Put the session-id here.",
-      "required": true
+      "required": true,
+      "value": ""
     },  
-
-    "ALIVE_IMG": {
-      "description": "https://i.ibb.co/tTfSqRbc/82.jpg.",
-      "required": true
+    
+    "STICKER_NAME": {
+      "description": "type your sticker pack name.",
+      "required": false,
+      "value": "hacker_MD"
+    }, 
+      
+    "PREFIX": {
+      "description": "paste your bot prefix note! Don't apply null prefix.",
+      "required": false,
+      "value": "."
     },
     
-    "ALIVE_MSG": {   "description": "*╭───────────╶╶╶╾⦁⦂⦁*",
-"*◈MENU MD_Chethiya_00◈*",
-"*╰───────────╶╶╶╾⦁⦂⦁*",
-"*👋 Hello Welcome to*",
-"~`穴 ༺ KD᭄ chethiya 穴༺`~"
-͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏
-"*╭─────────────●●►*",
-"*❖╭─────────────···▸",
-"> *TAIME*©️: 10 hours, 53 minutes, 21 seconds",
-"> *RAM USE🧬* : 103.21MB / 63276MB",
-"> NAME BOT🛡: *MD Chethiya*",
-"> *OWNER*🤴 : *wa.me/94702484047*🚀",
-">*CREATOR*👨🏻‍🔧: *CYBER MD ( chethiya wedasinga )* ",
-"> *VERSIONS🎭* :1.200.0v ",
-"*╰─────────────●●►*",
+    "MODE": {
+      "description": "select your bot work type public-private-inbox-group.",
+      "required": false,
+      "value": "public"
+      
+    },
+    
+    
+    "ALWAYS_ONLINE": {
+      "description": "Make it true if want always online.",
+      "required": false,
+      "value": "false"  
+    },    
+  
+    "AUTO_VOICE": {
+      "description": "Make it true if want automatic voice reply .",
+      "required": false,
+      "value": "false"
+    }, 
 
-"*[   PRIFIX : ( . )   ]*",
-"*╭─────────────●●►*",
-"*┋ 📜 .ALLMENU*",
-"*┋ ⚙️ .ALIVE*",
-"*╰─────────────●●►*",
-"*👨‍💻 ONLYE OWNER COOMNDS*",
-"[  94702484047 ]",
+    "AUTO_REPLY": {
+      "description": "Make it true if you want automatic reply.",
+      "required": false,
+      "value": "false"
+    }, 
 
-"*•────────────╴╴╴•⟢*",
-"> *🔘 POWER BY MD chethiya*",
-"*•────────────╴╴╴•⟢*","required": true
-    }   
+    "AUTO_STICKER": {
+      "description": "Make it true if you want automatic sticker.",
+      "required": false,
+      "value": "false"
+    }, 
+
+
+    "AUTO_STATUS_SEEN": {
+      "description": "Make it true for automatic status seen.",
+      "required": true,
+      "value": "true"
+    }, 
+
+    "AUTO_STATUS_REACT": {
+      "description": "make it true for automatic status reaction or like.",
+      "required": true,
+      "value": "true"
+    }, 
+
+    "AUTO_STATUS_REPLY": {
+      "description": "Make it true for auto reply msg on status seen.",
+      "required": true,
+      "value": "true"
+    }, 
+
+    "AUTO_STATUS_MSG": {
+      "description": "Type custom message on status reply",
+      "required": true,
+      "value": "*SEEN YOUR STATUS BY chethiya_MD 🖤*"
+   
+     }, 
+    
+    "OWNER_NAME": {
+      "description": "Type Bot Owner Name.",
+      "required": false,
+      "value": "chethiya_MD "
+}, 
+
+    "OWNER_NUMBER": {
+      "description": "put the owner number for bot.",
+      "required": false,
+      "value": "94702484047"
+
+    }, 
+
+    "BOT_NAME": {
+      "description": "Type here the bot name.",
+      "required": false,
+      "value": "KHAN-MD"
+
+      }, 
+
+    "ANTI_LINK": {
+      "description": "Make it true if you want bot auto remove group link.",
+      "required": true,
+      "value": "true"
+      
+    },
+    
+    "ANTI_BAD": {
+      "description": "Make it true if you want bot auto delete bad words.",
+      "required": false,
+      "value": "false"
+    }, 
+
+     "DESCRIPTION": {
+      "description": "add caption for menu and other",
+      "required": false,
+      "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ  chethiya_MD*"
+    },
+
+      "DELETE_LINKS": {
+      "description": "remove links from group automatically without removing member",
+      "required": false,
+      "value": "true"
+    },
+    
+    "AUTO_RECORDING": {
+      "description": "Make it true if you want auto recoding.",
+      "required": false,
+      "value": "false"
+    },
+
+    "AUTO_TYPING": {
+      "description": "Make it true if you want auto typing.",
+      "required": false,
+      "value": "false"
+    },
+
+    "AUTO_REACT": {
+      "description": "Make it true if you want react on every message.",
+      "required": false,
+      "value": "false"
+    },
+    
+    "CUSTOM_REACT": {
+      "description": "Make it true if you want custom reactions.",
+      "required": false,
+      "value": "false"
+      
+    }, 
+    
+    "CUSTOM_REACT_EMOJIS": {
+      "description": "put here custom react react emojis.",
+      "required": false,
+      "value": "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🤎,🖤,🤍"
+    }, 
+    
+    "ANTI_DEL_PATH": {
+      "description": "change it to -same- if you want to resend deleted message in same chat",
+      "required": false,
+      "value": "log"
+    }, 
+
+    "READ_MESSAGE": {
+      "description": "Make it true if you want bot read your all sms just now.",
+      "required": false,
+      "value": "false"
+    }
+
 },
 
      "buildpacks": [
         {
-            "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+            "url": "https://files.catbox.moe/b7hkxj.jpg"
         }
      ],
   "stack": "heroku-24"
 }
+  
