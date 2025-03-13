@@ -316,7 +316,7 @@ cmd({
 },
 async (conn, mek, m, { from, reply }) => {
     try {
-        const loadingMessage = await conn.sendMessage(from, { text: 'KHANX-AI🗿' });
+        const loadingMessage = await conn.sendMessage(from, { text: 'chethiya_MD 🗿' });
         
         // Define the ASCII art messages
         const asciiMessages = [
@@ -344,6 +344,46 @@ async (conn, mek, m, { from, reply }) => {
         console.log(e);
         reply(`❌ *Error!* ${e.message}`);
     }
+
 });
 
-// > JawadTechX 
+cmd({
+    pattern: "004",
+    desc: "Displays a dynamic edit msg for fun.",
+    category: "tools",
+    react: "🛑",
+    filename: __filename
+},
+async (conn, mek, m, { from, reply }) => {
+    try {
+        const loadingMessage = await conn.sendMessage(from, { text: '💋' });
+        const emojiMessages = [
+            "systemsystem down "🧑‍💻", "🥷", "☠","☣", 
+            "○", "●", "□", "《¤_¤》", "🧬", 
+            "⚙", "🔐", "🔏", "🔒", "🛡", 
+            "📨", "📬"
+        ];
+
+        for (const line of emojiMessages) {
+            await new Promise(resolve => setTimeout(resolve, 1000)); // Delay for 1 second
+            await conn.relayMessage(
+                from,
+                {
+                    protocolMessage: {
+                        key: loadingMessage.key,
+                        type: 14,
+                        editedMessage: {
+                            conversation: line,
+                        },
+                    },
+                },
+                {}
+            );
+        }
+    } catch (e) {
+        console.log(e);
+        reply(`❌ *Error!* ${e.message}`);
+    }
+});
+
+
