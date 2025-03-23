@@ -44,6 +44,7 @@ const {
   const prefix = config.PREFIX
   
   const ownerNumber = ['94702484047']
+  const ownerNumber = ['94775254488']
   
   const tempDir = path.join(os.tmpdir(), 'cache-temp')
   if (!fs.existsSync(tempDir)) {
@@ -112,7 +113,7 @@ const port = process.env.PORT || 9090;
   console.log('Plugins installed successful ✅')
   console.log('Bot connected to whatsapp ✅')
   
-  let up = `*Hello there chethiya_MD User! \ud83d\udc4b\ud83c\udffb* \n\n> Simple , Straight Forward But Loaded With Features \ud83c\udf8a, Meet chethiya_MD WhatsApp Bot.\n\n *Thanks for using chethiya_MD \ud83d\udea9* \n\n> Join WhatsApp Channel :- ⤵️\n \n\n\n- *YOUR PREFIX:* = ${prefix}\n\nDont forget to give star to repo ⬇️\n\nhttps://github.com/ChethiyaMD/Chethiya_MD.git \n\n> © Powered BY JawadTechX \ud83d\udda4`;
+    let up = `*Hello there chethiya_MD User! \ud83d\udc4b\ud83c\udffb* \n\n> Simple , Straight Forward But Loaded With Features \ud83c\udf8a, Meet chethiya_MD WhatsApp Bot.\n\n *Thanks for using chethiya_MD \ud83d\udea9* \n\n> Join WhatsApp Channel :- ⤵️\n \nhttps://whatsapp.com/channel/0029Vb5pEQGHgZWVgS0JhS2e\n\n- *YOUR PREFIX:* = ${prefix}\n\nDont forget to give star to repo ⬇️\n\nhttps://github.com/ChethiyaMD/\n\n> © Powered BY chethiya wedasiga \ud83d\udda4`;
     conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/b7hkxj.jpg` }, caption: up })
   }
   })
