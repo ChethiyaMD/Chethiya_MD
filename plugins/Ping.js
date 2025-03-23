@@ -6,7 +6,7 @@ cmd({
     alias: ["speed","pong"],use: '.ping',
     desc: "Check bot's response time.",
     category: "main",
-    react: "⚡",
+    react: "🏷",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, reply }) => {
@@ -21,7 +21,7 @@ async (conn, mek, m, { from, quoted, reply }) => {
 
         // Send the ping result
         await conn.sendMessage(from, { 
-            text: `*⚡ chethiya_MD SPEED: ${ping}ms*`, 
+            text: `*🏷 chethiya_MD SPEED: ${ping}ms*`, 
             contextInfo: {
                 mentionedJid: [m.sender],
                 forwardingScore: 999,
@@ -42,10 +42,10 @@ async (conn, mek, m, { from, quoted, reply }) => {
 // ping2 
 
 cmd({
-    pattern: "ping2",
+    pattern: "pong",
     desc: "Check bot's response time.",
     category: "main",
-    react: "🍂",
+    react: "📌",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
