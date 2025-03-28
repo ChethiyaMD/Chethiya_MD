@@ -22,9 +22,13 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃◈┃• *🧬 Version*: 0.0.1 BETA
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
-*┌───────────╶╶╶╾⦁⦂⦁*
-> *joing my WhatsApp Channel*
-https://whatsapp.com/channel/0029Vb5pEQGHgZWVgS0JhS2e
+👋  𝐇𝐈, _𝐈❜𝐀𝐌👾𝐀𝐋𝐈𝐕𝐄🇱🇰𝐍𝐎𝐖_ 👾
+      
+*╭
+*╰──────────●●►*
+*╭──────────●●►*
+*│* *Hello , I am alive now!!*
+*╰──────────●●►* 
 ╭━━━━❮ *𝚂𝚈𝚂𝚃𝙴𝙼* ❯━⊷ 
 ┃◇╭━━〔《*Menu List* 》〕━━┈⊷
 ┃◈╭─────────────·๏
@@ -48,6 +52,14 @@ https://whatsapp.com/channel/0029Vb5pEQGHgZWVgS0JhS2e
 ┃◈┃• repo 📒
 ┃◈└───────────┈⊷
 ╰──────────────┈⊷
+*🔢 Reply below number*
+
+
+*Github Repo:* https://github.com/ChethiyaMD.git
+
+*┌───────────╶╶╶╾⦁⦂⦁*
+> *joing my WhatsApp Channel*
+https://whatsapp.com/channel/0029Vb5pEQGHgZWVgS0JhS2e
 ╰━━━━━━━━━━━━━━━━━⊷
 ╔═════════════●●►
 ╚ ❯
@@ -63,7 +75,7 @@ https://whatsapp.com/channel/0029Vb5pEQGHgZWVgS0JhS2e
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363354023106228@newsletter',
-                    newsletterName: 'JawadTechX',
+                    newsletterName: 'chethiya_MD,
                     serverMessageId: 143
                 }
             }
