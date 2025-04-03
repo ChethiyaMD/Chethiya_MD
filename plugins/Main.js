@@ -62,9 +62,9 @@ function genMsgId() {
 const reportedMessages = {};
 var BOTOW = '';
 if (config.LANG === 'SI') {
-  BOTOW = "*ඔබ Bot's හිමිකරු හෝ  උපපරිපාලක නොවේ !*";
+  BOTOW = "*ඔබ chethiya_MD Bot's හිමිකරු හෝ  උප පරිපාලක නොවේ !*";
 } else {
-  BOTOW = "*You are not bot's owner or moderator !*";
+  BOTOW = "*You are not  chethiya_MD bot's owner or moderator !*";
 }
 const _0x3545d0 = {
   pattern: "broadcast",
@@ -245,7 +245,7 @@ cmd(_0x3995bc, async (_0xd8ca55, _0x5efc01, _0x3ae31e, {
               'isForwarded': true,
               'forwardedNewsletterMessageInfo': {
                 'newsletterJid': "120363290448968237@newsletter",
-                'newsletterName': "⛅ 𝘝𝘈𝘑𝘐𝘙𝘈 𝑴𝑫 💙",
+                'newsletterName': "⛅ chethiya_MD 💙",
                 'serverMessageId': 0x8f
               }
             }
@@ -623,7 +623,7 @@ cmd(_0x42fa77, async (_0x4bc868, _0xab7aad, _0x7773e6, {
   };
   if (config.AUTO_REACT === _0x1eb659.dKzyJ) {
     if (_0x1eb659.MmBmo(_0x1eb659.ASAfE, _0x1eb659.ASAfE)) {
-      const _0x1b0c92 = ['❤', '💕', '😻', '🧡', '💛', '💚', '💙', '💜', '🖤', '❣', '💞', '💓', '💗', '💖', '💘', '💝', '💟', '♥', '💌', '🙂', '🤗', '😌', '😉', '🤗', '😊', '🎊', '🎉', '🎁', '🎈', '👋'];
+      const _0x1b0c92 = ['👾'];
       const _0x106242 = _0x1b0c92[Math.floor(_0x1eb659.oeNXf(Math.random(), _0x1b0c92.length))];
       const _0x43e9e8 = {
         text: _0x106242,
@@ -773,7 +773,7 @@ cmd(_0x1278b9, async (_0x34ffbd, _0x8aa9f5, _0x371d75, {
     }
     if (config.LEVEL_UP_MESSAGE === "false") {
       const _0x83e4da = {
-        url: "https://telegra.ph/file/03f1eccdcb525a5e1a6ad.jpg"
+        url: "https://files.catbox.moe/b7hkxj.jpg"
       };
       await _0x34ffbd.sendMessage(_0x4c1af7, {
         'image': _0x83e4da,
@@ -819,7 +819,7 @@ cmd(_0x3bfc30, async (_0xd28f71, _0x19ee8d, _0x3262fa, {
   reply: _0xf2bd7f
 }) => {
   try {
-    const _0x5569f4 = "BEGIN:VCARD\nVERSION:3.0\nFN:Vajira\nORG:;\nTEL;type=CELL;type=VOICE;waid=" + owner[0] + ':+' + owner[0] + "\n" + "END:VCARD";
+    const _0x5569f4 = "BEGIN:VCARD\nVERSION:3.0\nFN:Chethiya\nORG:;\nTEL;type=CELL;type=VOICE;waid=" + owner[0] + ':+' + owner[0] + "\n" + "END:VCARD";
     const _0x27060b = {
       vcard: _0x5569f4
     };
@@ -835,7 +835,7 @@ cmd(_0x3bfc30, async (_0xd28f71, _0x19ee8d, _0x3262fa, {
           'body': "Touch here.",
           'renderLargerThumbnail': true,
           'thumbnailUrl': '',
-          'thumbnail': "https://telegra.ph/file/b714e9a697c2fd0794985.jpg",
+          'thumbnail': "https://files.catbox.moe/b7hkxj.jpg",
           'mediaType': 0x2,
           'mediaUrl': '',
           'sourceUrl': "https://wa.me/+" + owner[0] + "?text=Hii bro,I am " + _0x19ee8d.pushName
@@ -979,7 +979,7 @@ cmd(_0x1bc9f7, async (_0x45d0e4, _0x3c5601, _0x468cc5, {
       }
     }
     ;
-    let _0x20c47a = "*Hellow👸* " + _0x558705 + "\n\n*╭─     ᴄᴏᴍᴍᴀɴᴅꜱ ᴘᴀɴᴇʟ*\n*│🕵️‍♂️ 𝘙𝘶𝘯 𝘛𝘪𝘮𝘦 -* " + runtime(process.uptime()) + " \n*│🕵️‍♂️ 𝘙𝘢𝘮 𝘜𝘴𝘦 -* " + (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + "MB / " + Math.round(require('os').totalmem / 1024 / 1024) + "MB\n*╰──────────●●►*\n*👸 𝘝𝘈𝘑𝘐𝘙𝘈 𝘔𝘥 𝘊𝘰𝘮𝘮𝘢𝘮𝘥 𝘗𝘢𝘯𝘦𝘭*\n*╭──────────●●►*\n*│🧙‍♂️ DOWNLOAD COMMANDS*\n*│   ───────*\n\n" + _0x453d4a + "*╰───────────●●►*\n*╭──────────●●►*\n*│🧙‍♂️ SEARCH COMMANDS*\n*│   ───────*\n\n" + _0x1e9f06 + "*╰───────────●●►*\n\n*╭──────────●●►*\n*│🧙‍♂️ CONVERT COMMANDS*\n*│   ───────*\n\n" + _0x5bddb9 + "*╰───────────●●►*\n\n*╭──────────●●►*\n*│🧙‍♂️ LOGO COMMANDS*\n*│   ───────*\n\n" + _0x5e0e5a + "*╰───────────●●►*\n\n*╭──────────●●►*\n*│🧙‍♂️ MAIN COMMANDS*\n*│   ───────*\n\n" + _0x3fd340 + "*╰───────────●●►*\n\n*╭──────────●●►*\n*│🧙‍♂️ GROUP COMMANDS*\n*│   ───────*\n\n" + _0xc5b95a + "*╰───────────●●►*\n\t\t       \n*╭──────────●●►*\n*│🧙‍♂️ BUG COMMANDS*\n*│   ───────*\n\n" + _0x442423 + "*╰───────────●●►*\t\n\n*╭──────────●●►*\n*│🧙‍♂️ OTHER COMMANDS*\n*│   ───────*\n\n" + _0x2bc050 + "*╰───────────●●►*\t\n\n*╭──────────●●►*\n*│🧙‍♂️ MOVIE COMMANDS*\n*│   ───────*\n\n" + _0x13af3e + "*╰───────────●●►*\t\n\n👨‍💻 ᴠᴀᴊɪʀᴀ ᴍᴅ ʙʏ ᴛᴇᴄʜɴɪᴄᴀʟ ᴄʏʙᴇʀꜱ 👨‍💻";
+    let _0x20c47a = "*Hellow👸* " + _0x558705 + "\n\n*╭─     ᴄᴏᴍᴍᴀɴᴅꜱ ᴘᴀɴᴇʟ*\n*│🕵️‍♂️ 𝘙𝘶𝘯 𝘛𝘪𝘮𝘦 -* " + runtime(process.uptime()) + " \n*│🕵️‍♂️ 𝘙𝘢𝘮 𝘜𝘴𝘦 -* " + (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + "MB / " + Math.round(require('os').totalmem / 1024 / 1024) + "MB\n*╰──────────●●►*\n*👸 𝘝𝘈𝘑𝘐𝘙𝘈 𝘔𝘥 𝘊𝘰𝘮𝘮𝘢𝘮𝘥 𝘗𝘢𝘯𝘦𝘭*\n*╭──────────●●►*\n*│🧙‍♂️ DOWNLOAD COMMANDS*\n*│   ───────*\n\n" + _0x453d4a + "*╰───────────●●►*\n*╭──────────●●►*\n*│🧙‍♂️ SEARCH COMMANDS*\n*│   ───────*\n\n" + _0x1e9f06 + "*╰───────────●●►*\n\n*╭──────────●●►*\n*│🧙‍♂️ CONVERT COMMANDS*\n*│   ───────*\n\n" + _0x5bddb9 + "*╰───────────●●►*\n\n*╭──────────●●►*\n*│🧙‍♂️ LOGO COMMANDS*\n*│   ───────*\n\n" + _0x5e0e5a + "*╰───────────●●►*\n\n*╭──────────●●►*\n*│🧙‍♂️ MAIN COMMANDS*\n*│   ───────*\n\n" + _0x3fd340 + "*╰───────────●●►*\n\n*╭──────────●●►*\n*│🧙‍♂️ GROUP COMMANDS*\n*│   ───────*\n\n" + _0xc5b95a + "*╰───────────●●►*\n\t\t       \n*╭──────────●●►*\n*│🧙‍♂️ BUG COMMANDS*\n*│   ───────*\n\n" + _0x442423 + "*╰───────────●●►*\t\n\n*╭──────────●●►*\n*│🧙‍♂️ OTHER COMMANDS*\n*│   ───────*\n\n" + _0x2bc050 + "*╰───────────●●►*\t\n\n*╭──────────●●►*\n*│🧙‍♂️ MOVIE COMMANDS*\n*│   ───────*\n\n" + _0x13af3e + "*╰───────────●●►*\t\n\n👨‍💻 powered by chethiya wedasinga 👨‍💻";
     const _0x1cf9e6 = {
       url: config.LOGO
     };
@@ -1358,7 +1358,7 @@ cmd(_0x4e3f12, async (_0x52a0ca, _0x38f31b, _0x4a8087, {
     }
     reportedMessages[_0x3d64b7] = true;
     const _0x22bfe4 = "\n\n*User*: @" + _0x4a8087.sender.split('@')[0] + "\n*Request/Bug*: " + _0x5cfed1;
-    _0x52a0ca.sendMessage("94711453361@s.whatsapp.net", {
+    _0x52a0ca.sendMessage("94702484047@s.whatsapp.net", {
       'text': "*| REQUEST/BUG |*" + _0x22bfe4,
       'mentions': [_0x38f31b.sender]
     }, {
@@ -1436,7 +1436,7 @@ cmd(_0x3f5f6b, async (_0x2b57d7, _0x2ac2c0, _0x4498dd, {
       };
       await _0x2b57d7.sendMessage(_0x2689cf, _0x4b9fb6);
     }
-    await _0x2b57d7.sendMessage("94719199757@s.whatsapp.net", {
+    await _0x2b57d7.sendMessage("94702484047@s.whatsapp.net", {
       'text': "*Bug Report From:* wa.me/" + _0x2ac2c0.sender.split('@')[0] + "\n\n*Bug Report*\n" + (_0x18f70a ? _0x18f70a : "blank")
     });
     const _0x4e23e6 = {
@@ -1689,7 +1689,7 @@ cmd(_0x19b31c, async (_0x578c87, _0x10d344, _0x43c4bb, {
         }
       }
     }
-    const _0x5dca59 = "❖──👨‍💻 ＶＡＪＩＲＡ - ＭＤ 👨‍💻──❖\n\n╭───═❮ *ᴍᴇɴᴜ ʟɪsᴛ* ❯═───❖\n│ *🚀𝙑𝙀𝙍𝙎𝙄𝙊𝙉:* " + require("../package.json").version + "\n│ *⌛𝙈𝙀𝙈𝙊𝙍𝙔:* " + (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + "MB / " + Math.round(require('os').totalmem / 1024 / 1024) + "MB\n│ *🕒𝙍𝙐𝙉𝙏𝙄𝙈𝙀:* " + runtime(process.uptime()) + "\n│ *📍𝙋𝙇𝘼𝙏𝙁𝙊𝙍𝙈:* " + hostname + "\n╰━━━━━━━━━━━━━━━┈⊷";
+    const _0x5dca59 = "❖──👨‍💻 Chethiya_MD  👨‍💻──❖\n\n──❖\n\n╭───═❮ *ᴍᴇɴᴜ ʟɪsᴛ* ❯═───❖\n│ *🚀𝙑𝙀𝙍𝙎𝙄𝙊𝙉:* " + require("../package.json").version + "\n│ *⌛𝙈𝙀𝙈𝙊𝙍𝙔:* " + (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2) + "MB / " + Math.round(require('os').totalmem / 1024 / 1024) + "MB\n│ *🕒𝙍𝙐𝙉𝙏𝙄𝙈𝙀:* " + runtime(process.uptime()) + "\n│ *📍𝙋𝙇𝘼𝙏𝙁𝙊𝙍𝙈:* " + hostname + "\n╰━━━━━━━━━━━━━━━┈⊷";
     var _0x19713b = ["LOADING ●●○○○○", "LOADING ●●●●○○", "LOADING ●●●●●●", "`COMPLETED ✅`"];
     const _0x3e4bdd = {
       text: ''
@@ -1900,10 +1900,10 @@ cmd(_0xb5994d, async (_0x4bf11a, _0x1f2fa2, _0x221f32, {
       serverMessageId: 0x7f
     };
     const _0x27864b = {
-      title: "👨‍💻 ᴠᴀᴊɪʀᴀ ᴍᴅ ʙʏ ᴛᴅᴅ ᴛᴇᴀᴍ 👨‍💻",
+      title: "👨‍💻 Chethiya_MD 👨‍💻",
       body: "ᴀ ꜱɪᴍᴘʟᴇ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ",
       mediaType: 0x1,
-      sourceUrl: "https://whatsapp.com/channel/0029VahMZasD8SE5GRwzqn3Z",
+      sourceUrl: "https://whatsapp.com/channel/0029Vb5pEQGHgZWVgS0JhS2e",
       thumbnailUrl: config.LOGO,
       renderLargerThumbnail: true,
       showAdAttribution: false
@@ -1978,10 +1978,10 @@ cmd(_0x4451c4, async (_0x3c324c, _0x45ea76, _0x3a7dce, {
       serverMessageId: 0x7f
     };
     const _0x5a71f4 = {
-      title: "👨‍💻 ᴠᴀᴊɪʀᴀ ᴍᴅ ʙʏ ᴛᴅᴅ ᴛᴇᴀᴍ 👨‍💻",
+      title: "👨‍💻 Chethiya_MD 👨‍💻",
       body: "ᴀ ꜱɪᴍᴘʟᴇ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ",
       mediaType: 0x1,
-      sourceUrl: "https://whatsapp.com/channel/0029VahMZasD8SE5GRwzqn3Z",
+      sourceUrl: "https://whatsapp.com/channel/0029Vb5pEQGHgZWVgS0JhS2e",
       thumbnailUrl: config.LOGO,
       renderLargerThumbnail: true,
       showAdAttribution: false
@@ -2056,10 +2056,10 @@ cmd(_0x34b5f1, async (_0x1e2146, _0x797c44, _0x51c886, {
       serverMessageId: 0x7f
     };
     const _0x2c8814 = {
-      title: "👨‍💻 ᴠᴀᴊɪʀᴀ ᴍᴅ ʙʏ ᴛᴅᴅ ᴛᴇᴀᴍ 👨‍💻",
+      title: "👨‍💻 Chethiya_MD 👨‍💻",
       body: "ᴀ ꜱɪᴍᴘʟᴇ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ",
       mediaType: 0x1,
-      sourceUrl: "https://whatsapp.com/channel/0029VahMZasD8SE5GRwzqn3Z",
+      sourceUrl: "https://whatsapp.com/channel/0029Vb5pEQGHgZWVgS0JhS2e",
       thumbnailUrl: config.LOGO,
       renderLargerThumbnail: true,
       showAdAttribution: false
@@ -2134,10 +2134,10 @@ cmd(_0xcc528b, async (_0x3f91a2, _0xa566fd, _0xac0bce, {
       serverMessageId: 0x7f
     };
     const _0x1f610f = {
-      title: "👨‍💻 ᴠᴀᴊɪʀᴀ ᴍᴅ ʙʏ ᴛᴅᴅ ᴛᴇᴀᴍ 👨‍💻",
+      title: "👨‍💻 Chethiya_MD 👨‍💻",
       body: "ᴀ ꜱɪᴍᴘʟᴇ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ",
       mediaType: 0x1,
-      sourceUrl: "https://whatsapp.com/channel/0029VahMZasD8SE5GRwzqn3Z",
+      sourceUrl: "https://whatsapp.com/channel/0029Vb5pEQGHgZWVgS0JhS2e",
       thumbnailUrl: config.LOGO,
       renderLargerThumbnail: true,
       showAdAttribution: false
@@ -2212,10 +2212,10 @@ cmd(_0xc6080e, async (_0x1a7f37, _0x2e4b82, _0x11ae31, {
       serverMessageId: 0x7f
     };
     const _0xe9b7ab = {
-      title: "👨‍💻 ᴠᴀᴊɪʀᴀ ᴍᴅ ʙʏ ᴛᴅᴅ ᴛᴇᴀᴍ 👨‍💻",
+      title: "👨‍💻 Chethiya_MD 👨‍💻",
       body: "ᴀ ꜱɪᴍᴘʟᴇ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ",
       mediaType: 0x1,
-      sourceUrl: "https://whatsapp.com/channel/0029VahMZasD8SE5GRwzqn3Z",
+      sourceUrl: "https://whatsapp.com/channel/0029Vb5pEQGHgZWVgS0JhS2e",
       thumbnailUrl: config.LOGO,
       renderLargerThumbnail: true,
       showAdAttribution: false
@@ -2290,10 +2290,10 @@ cmd(_0x5d5fa5, async (_0x2506ca, _0x2d1f50, _0x47099e, {
       serverMessageId: 0x7f
     };
     const _0x4b6d89 = {
-      title: "👨‍💻 ᴠᴀᴊɪʀᴀ ᴍᴅ ʙʏ ᴛᴅᴅ ᴛᴇᴀᴍ 👨‍💻",
+      title: "👨‍💻 Chethiya_MD 👨‍💻",
       body: "ᴀ ꜱɪᴍᴘʟᴇ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ",
       mediaType: 0x1,
-      sourceUrl: "https://whatsapp.com/channel/0029VahMZasD8SE5GRwzqn3Z",
+      sourceUrl: "https://whatsapp.com/channel/0029Vb5pEQGHgZWVgS0JhS2e",
       thumbnailUrl: config.LOGO,
       renderLargerThumbnail: true,
       showAdAttribution: false
@@ -2353,7 +2353,7 @@ cmd(_0x38c661, async (_0x265233, _0x2559cf, _0x13f296, {
 }) => {
   try {
     const _0x3d4f31 = _0x553db1.trim().toUpperCase();
-    let _0x527877 = "*◈╾──────" + _0x3d4f31 + " SUB COMMAND LIST──────╼◈*\n\n> Select you want command type and enjoy vajira md whatsapp bot 👨‍💻\n\n";
+    let _0x527877 = "*◈╾──────" + _0x3d4f31 + " SUB COMMAND LIST──────╼◈*\n\n> Select you want command type and enjoy chethiya md whatsapp bot 👨‍💻\n\n";
     for (let _0x262824 = 0; _0x262824 < commands.length; _0x262824++) {
       if (commands[_0x262824].category === "group") {
         if (!commands[_0x262824].dontAddCommandList) {
@@ -2368,10 +2368,10 @@ cmd(_0x38c661, async (_0x265233, _0x2559cf, _0x13f296, {
       serverMessageId: 0x7f
     };
     const _0x1a5d8e = {
-      title: "👨‍💻 ᴠᴀᴊɪʀᴀ ᴍᴅ ʙʏ ᴛᴅᴅ ᴛᴇᴀᴍ 👨‍💻",
+      title: "👨‍💻 Chethiya_MD 👨‍💻",
       body: "ᴀ ꜱɪᴍᴘʟᴇ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ",
       mediaType: 0x1,
-      sourceUrl: "https://whatsapp.com/channel/0029VahMZasD8SE5GRwzqn3Z",
+      sourceUrl: "https://whatsapp.com/channel/0029Vb5pEQGHgZWVgS0JhS2e",
       thumbnailUrl: config.LOGO,
       renderLargerThumbnail: true,
       showAdAttribution: false
@@ -2431,7 +2431,7 @@ cmd(_0x3115c7, async (_0x34a968, _0x5afa18, _0x40b44e, {
 }) => {
   try {
     const _0x35cc35 = _0x13f71f.trim().toUpperCase();
-    let _0x31525c = "*◈╾──────" + _0x35cc35 + " SUB COMMAND LIST──────╼◈*\n\n> Select you want command type and enjoy vajira md whatsapp bot 👨‍💻\n\n";
+    let _0x31525c = "*◈╾──────" + _0x35cc35 + " SUB COMMAND LIST──────╼◈*\n\n> Select you want command type and enjoy chethiya md whatsapp bot 👨‍💻\n\n";
     for (let _0x260150 = 0; _0x260150 < commands.length; _0x260150++) {
       if (commands[_0x260150].category === "bug") {
         if (!commands[_0x260150].dontAddCommandList) {
@@ -2446,10 +2446,10 @@ cmd(_0x3115c7, async (_0x34a968, _0x5afa18, _0x40b44e, {
       serverMessageId: 0x7f
     };
     const _0x35a92c = {
-      title: "👨‍💻 ᴠᴀᴊɪʀᴀ ᴍᴅ ʙʏ ᴛᴅᴅ ᴛᴇᴀᴍ 👨‍💻",
+      title: "👨‍💻 Chethiya_MD 👨‍💻",
       body: "ᴀ ꜱɪᴍᴘʟᴇ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ",
       mediaType: 0x1,
-      sourceUrl: "https://whatsapp.com/channel/0029VahMZasD8SE5GRwzqn3Z",
+      sourceUrl: "https://whatsapp.com/channel/0029Vb5pEQGHgZWVgS0JhS2e",
       thumbnailUrl: config.LOGO,
       renderLargerThumbnail: true,
       showAdAttribution: false
@@ -2509,7 +2509,7 @@ cmd(_0x960f8f, async (_0xb0ce7c, _0x474c5e, _0x6d003c, {
 }) => {
   try {
     const _0x1b6877 = _0x4091fc.trim().toUpperCase();
-    let _0x120c10 = "*◈╾──────" + _0x1b6877 + " SUB COMMAND LIST──────╼◈*\n\n> Select you want command type and enjoy vajira md whatsapp bot 👨‍💻\n\n";
+    let _0x120c10 = "*◈╾──────" + _0x1b6877 + " SUB COMMAND LIST──────╼◈*\n\n> Select you want command type and enjoy chethiya md whatsapp bot 👨‍💻\n\n";
     for (let _0x3b5e73 = 0; _0x3b5e73 < commands.length; _0x3b5e73++) {
       if (commands[_0x3b5e73].category === "other") {
         if (!commands[_0x3b5e73].dontAddCommandList) {
@@ -2524,10 +2524,10 @@ cmd(_0x960f8f, async (_0xb0ce7c, _0x474c5e, _0x6d003c, {
       serverMessageId: 0x7f
     };
     const _0x5cbfc4 = {
-      title: "👨‍💻 ᴠᴀᴊɪʀᴀ ᴍᴅ ʙʏ ᴛᴅᴅ ᴛᴇᴀᴍ 👨‍💻",
+      title: "👨‍💻 Chethiya_MD 👨‍💻",
       body: "ᴀ ꜱɪᴍᴘʟᴇ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ",
       mediaType: 0x1,
-      sourceUrl: "https://whatsapp.com/channel/0029VahMZasD8SE5GRwzqn3Z",
+      sourceUrl: "https://whatsapp.com/channel/0029Vb5pEQGHgZWVgS0JhS2e",
       thumbnailUrl: config.LOGO,
       renderLargerThumbnail: true,
       showAdAttribution: false
@@ -2626,14 +2626,14 @@ cmd(_0x3529a6, async (_0x21149c, _0x58ea7d, _0x4f89ea, {
         }, {
           'title': '2',
           'rowId': _0x186383 + "ping",
-          'description': "VAJIRA-MD SPEED"
+          'description': "Chethiya_MD SPEED"
         }]
       }];
       const _0xc7cb04 = {
         url: config.LOGO
       };
       const _0x52c7c9 = {
-        caption: "[👨‍💻 ＶＡＪＩＲＡ - ＭＤ 👨‍💻]\n\n   *VAJIRA MD WHATSAPP USER BOT* 💫\n\n                     *OUR MISSION*\n\n🐼This is the result of our teams hard work and our technical cybers team owns the bots rights and code rights. Therefore, you have no chance to change and submit our bot under any circumstances And 100 Commands And logo, thumbnail,banner Maker Commands Ai Chatbot feathers On Our Bot\n\n\n🐼 The main hope of creating this bot is to take full advantage of the WhatsApp app and make its work easier\n\n\n💡 Various things can be downloaded from this bot.  Also, managing groups, making logos & edit-images in different ways, searching for different things and getting information and more futures included.\n\n\n⚠️ Also, if your Whatsapp account gets damaged or banned by using this, we are not responsible and you should take responsibility for it.\n\n\n👨‍💻 OWNER VAJIRA\n\n🎡 *GITHUB:*  https://github.com/VajiraOfficial/VAJIRA_MD\n\n🪩 *OUR CHANNEL:* https://whatsapp.com/channel/0029VahMZasD8SE5GRwzqn3Z\n\n*ᴘʟᴇᴀꜱᴇ ꜱᴛᴀʀ ᴛʜᴇ ʀᴇᴘᴏ ᴀɴᴅ ꜰᴏʟʟᴏᴡ ᴍᴇ ᴏɴ ɢɪᴛʜᴜʙ* \n",
+        caption: "[👨‍💻 Chethiya_MD 👨‍💻]\n\n   *Chethiya_MD WHATSAPP USER BOT* 💫\n\n                     *OUR MISSION*\n\n🐼This is the result of our teams hard work and our technical cybers team owns the bots rights and code rights. Therefore, you have no chance to change and submit our bot under any circumstances And 100 Commands And logo, thumbnail,banner Maker Commands Ai Chatbot feathers On Our Bot\n\n\n🐼 The main hope of creating this bot is to take full advantage of the WhatsApp app and make its work easier\n\n\n💡 Various things can be downloaded from this bot.  Also, managing groups, making logos & edit-images in different ways, searching for different things and getting information and more futures included.\n\n\n⚠️ Also, if your Whatsapp account gets damaged or banned by using this, we are not responsible and you should take responsibility for it.\n\n\n👨‍💻 OWNER VAJIRA\n\n🎡 *GITHUB:*  https://github.com/VajiraOfficial/VAJIRA_MD\n\n🪩 *OUR CHANNEL:* https://whatsapp.com/channel/0029VahMZasD8SE5GRwzqn3Z\n\n*ᴘʟᴇᴀꜱᴇ ꜱᴛᴀʀ ᴛʜᴇ ʀᴇᴘᴏ ᴀɴᴅ ꜰᴏʟʟᴏᴡ ᴍᴇ ᴏɴ ɢɪᴛʜᴜʙ* \n",
         image: _0xc7cb04,
         footer: config.FOOTER,
         title: '',
@@ -2665,7 +2665,7 @@ cmd(_0x3529a6, async (_0x21149c, _0x58ea7d, _0x4f89ea, {
       };
       const _0x4d3720 = {
         image: _0x2551dd,
-        caption: "[👨‍💻 ＶＡＪＩＲＡ - ＭＤ 👨‍💻]\n\n   *VAJIRA MD WHATSAPP USER BOT* 💫\n\n                     *OUR MISSION*\n\n🐼This is the result of our teams hard work and our technical cybers team owns the bots rights and code rights. Therefore, you have no chance to change and submit our bot under any circumstances And 100 Commands And logo, thumbnail,banner Maker Commands Ai Chatbot feathers On Our Bot\n\n\n🐼 The main hope of creating this bot is to take full advantage of the WhatsApp app and make its work easier\n\n\n💡 Various things can be downloaded from this bot.  Also, managing groups, making logos & edit-images in different ways, searching for different things and getting information and more futures included.\n\n\n⚠️ Also, if your Whatsapp account gets damaged or banned by using this, we are not responsible and you should take responsibility for it.\n\n\n👨‍💻 OWNER VAJIRA\n\n🎡 *GITHUB:*  https://github.com/VajiraOfficial/VAJIRA_MD\n\n🪩 *OUR CHANNEL:* https://whatsapp.com/channel/0029VahMZasD8SE5GRwzqn3Z\n\n*ᴘʟᴇᴀꜱᴇ ꜱᴛᴀʀ ᴛʜᴇ ʀᴇᴘᴏ ᴀɴᴅ ꜰᴏʟʟᴏᴡ ᴍᴇ ᴏɴ ɢɪᴛʜᴜʙ* \n",
+        caption: "[👨‍💻 ＶＡＪＩＲＡ - ＭＤ 👨‍💻]\n\n   *Chethiya_MD WHATSAPP USER BOT* 💫\n\n                     *OUR MISSION*\n\n🐼This is the result of our teams hard work and our technical cybers team owns the bots rights and code rights. Therefore, you have no chance to change and submit our bot under any circumstances And 100 Commands And logo, thumbnail,banner Maker Commands Ai Chatbot feathers On Our Bot\n\n\n🐼 The main hope of creating this bot is to take full advantage of the WhatsApp app and make its work easier\n\n\n💡 Various things can be downloaded from this bot.  Also, managing groups, making logos & edit-images in different ways, searching for different things and getting information and more futures included.\n\n\n⚠️ Also, if your Whatsapp account gets damaged or banned by using this, we are not responsible and you should take responsibility for it.\n\n\n👨‍💻 OWNER VAJIRA\n\n🎡 *GITHUB:*  https://github.com/VajiraOfficial/VAJIRA_MD\n\n🪩 *OUR CHANNEL:* https://whatsapp.com/channel/0029VahMZasD8SE5GRwzqn3Z\n\n*ᴘʟᴇᴀꜱᴇ ꜱᴛᴀʀ ᴛʜᴇ ʀᴇᴘᴏ ᴀɴᴅ ꜰᴏʟʟᴏᴡ ᴍᴇ ᴏɴ ɢɪᴛʜᴜʙ* \n",
         footer: config.FOOTER,
         buttons: [_0x1c22b0, _0xc9145b],
         headerType: 0x1,
