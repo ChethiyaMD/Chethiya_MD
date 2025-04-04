@@ -1,7 +1,7 @@
 {
   "name": "chethiya_MD_CHETIYA_00",
   "description": "Javascript WhatsApp bot made by  chethiya wedasiga",
-  "logo": "https://raw.githubusercontent.com/JawadYTX/KHAN-DATA/refs/heads/main/logo/KHAN.png",
+  "logo": "https://files.catbox.moe/b7hkxj.jpg",
   "keywords": ["chethiya_MD"],
   "success_url": "/",
 
@@ -175,7 +175,7 @@
 
      "buildpacks": [
         {
-            "url": "https://files.catbox.moe/b7hkxj.jpg"
+            "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
         }
      ],
   "stack": "heroku-24"
