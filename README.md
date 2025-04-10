@@ -145,7 +145,7 @@ You will need a session ID to run the KHAN-MD. Click the button below to obtain 
 <a href="https://github.com/JawadYTX/KHAN-MD/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>&nbsp;&nbsp;
 
  <p align="center">
-<a href="https://github.com/JawadYTX/KHAN-MD/blob/main/LICENSE"><img title="Followers" src="https://img.shields.io/github/license/JawadYTX/KHAN-MD?color=green&label=License&style=square"></a>
+<a href=""><img title="Followers" src="https://img.shields.io/github/license/JawadYTX/KHAN-MD?color=green&label=License&style=square"></a>
 
 ----
 
@@ -157,7 +157,7 @@ Stay connected with the latest updates and community by joining our official Wha
 
 [![WhatsApp Channel]()](https://whatsapp.com/channel/0029Vb5pEQGHgZWVgS0JhS2e)
 
----
+---[github repo](https://github.com/ChethiyaMD/Chethiya_MD.git)
 
 <h2 align="left">⚠️ Reminder</h2>
 <p style="text-align: center; font-size: 1.2em;">
@@ -181,11 +181,10 @@ Stay connected with the latest updates and community by joining our official Wha
 
 ---
 
-> KHAN-MD Owner 
-- [JawadTechX](https://github.com/JawadYTX)
-- Creater and Owner Of KHAN-MD
-> KHAN-MD Helpers 
-- [ROMEKTRICKS](https://github.com/ROMEKTRICKS)
+> chethiya_MD Owner 
+- [JawadTechX](https://Wa.me//+94702484047text=bot👾woner*....✨💞🌻🍁🪄📍__)
+- Creater and Owner Of chethiya_MD 
+> Chethiya_MD helps Sula_MD
 - For helping in bot plugin files.
   
 ---
@@ -201,6 +200,6 @@ Stay connected with the latest updates and community by joining our official Wha
 
 <br>
 
-<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+<a><img src='https://files.catbox.moe/b7hkxj.jpg'/></a>
 
 ---
